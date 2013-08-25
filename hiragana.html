@@ -1,0 +1,441 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>日语语法指南 | Learn Japanese</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="learn japanese,learn japanese for free,learn japanese online,how to learn japanese,learn hiragana,learn katakana,learn kanji" />
+<link type="text/css" rel="stylesheet" media="all" href="assetsk/reset.css" />
+<link type="text/css" rel="stylesheet" media="all" href="assets/960.css" />
+<link type="text/css" rel="stylesheet" media="all" href="assets/book.css" />
+<link type="text/css" rel="stylesheet" media="all" href="assets/node.css" />
+<link type="text/css" rel="stylesheet" media="all" href="assets/defaults.css" />
+<link type="text/css" rel="stylesheet" media="all" href="assets/system.css" />
+<link type="text/css" rel="stylesheet" media="all" href="assets/system-menus.css" />
+<link type="text/css" rel="stylesheet" media="all" href="assets/user.css" />
+<link type="text/css" rel="stylesheet" media="all" href="assets/google_cse.css" />
+<link type="text/css" rel="stylesheet" media="all" href="assets/typography.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="assets/style.css" />
+<link type="text/css" rel="stylesheet" media="print" href="assets/print.css" />
+<style>
+.spoiler { background-color: #444; color: #444; padding-right: 20px; }
+.spoiler em { color: #444; }
+.spoiler:hover, .reveal { background-color: transparent; }
+.spoiler:hover em, .reveal em { color: #F73; }
+
+</style><script type="text/javascript" src="assets/jquery.min.js?O"></script>
+<script type="text/javascript" src="assets/drupal.js?O"></script>
+<script type="text/javascript" src="assets/script.js?O"></script>
+    <script type="text/javascript">
+function flip(targetID) {
+  $("#"+targetID).toggle();
+}
+
+function toggleAll(targetID) {
+  $("#"+targetID+" .hide").toggle("slow");
+}
+function toggle(targetID) {
+  $("#"+targetID+" .toggle").toggle("slow");
+}
+
+function toggleSpoilers() {
+  $(".spoiler").toggleClass("reveal");
+}
+
+jQuery.extend(Drupal.settings, { "basePath": "/learn/", "googleanalytics": { "trackOutbound": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" } });
+</script></head>
+<body><div id="content-area" class="container-16"><a href="http://www.guidetojapanese.org/learn/grammar/hiragana" style="float:right">本页原文</a>
+<div id="content" class="grid-12">
+					<div class="breadcrumb"><a href="http://www.guidetojapanese.org/learn/">Home</a> &#187; <a href="index.html">日语语法指南</a> &#187; <a href="writing.html">日语书写系统</a></div>																				          				<div id="page-headline" class="clear-block">
+    					    <h1 id="page-title">平假名</h1>    					              				</div><!-- #page-headline -->
+															<div id="node-159" class="node  node-book clear-block">
+  <div class="content clear-block">
+        	<div class="node-author">作者：Tae Kim</div>
+            <link rel="stylesheet" type="text/css" href="/scripts/simplemodal.css" media="screen" />
+<script type="text/javascript" src="/scripts/jquery.simplemodal-1.3.4.min.js"></script><script type="text/javascript">
+
+function showModal(char) {
+$('#stroke').attr('src','/images/hiragana/'+char+'.gif');
+
+var fmt = '.mp3';
+
+if ($.browser.mozilla) {
+fmt = '.ogg';
+}
+
+$('#clip').attr('src','/audio/'+char+fmt).load();
+$('#basic-modal-content').modal({overlayClose:true});
+}
+
+function playClip(char) {
+
+var fmt = '.mp3';
+
+if ($.browser.mozilla) {
+fmt = '.ogg';
+}
+
+$('#clip').attr('src','/audio/'+char+fmt).load();
+
+var clip = document.getElementById("clip");
+clip.play()
+}
+</script><div id="basic-modal-content"><center><img id="stroke" src="" style="margin-bottom: 10px;" /><audio id="clip" src="" controls="true">Use the latest browser for audio</audio></center></div>
+<p><audio id="clip_inline" src=""> </audio></p>
+<script type="text/javascript">
+
+function playclip_inline(char) {
+
+var fmt = '.mp3';
+
+if ($.browser.mozilla) {
+fmt = '.ogg';
+}
+
+$('#clip_inline').attr('src','/audio/'+char+fmt).load();
+
+var clip_inline = document.getElementById("clip_inline");
+clip_inline.play();
+}
+
+
+$(document).ready(function() {
+$('.playIcon').find('img').hover(
+  function () {
+    if ($(this).attr('src') == '/images/play.png') {
+      $(this).attr('src', '/images/play_hover.png');
+    }
+  },
+  function () {
+    if ($(this).attr('src') == '/images/play_hover.png') {
+      $(this).attr('src', '/images/play.png');
+    }
+  }
+);
+
+$('.playIcon').click(
+  function () {
+    $(this).find('img').attr('src','/images/play_pressed.png').addClass('playing');
+    playclip_inline($(this).attr('href'));
+    return false;
+  }
+);
+
+$('#clip_inline').get(0).addEventListener("ended", function() {
+  $('.playing').attr('src','/images/play.png').removeClass('playing'); }, true);
+
+});
+</script><p>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/videoseries?list=PLA977767E51B55F1F&amp;hl=en_US" frameborder="0" allowfullscreen=""></iframe></p>
+<p><i>平假名</i>是最基础的日语发音单元。它代表了日语里面的每一个发音，所以理论上你可以使用平假名书写所有日语。但是因为日语书面语没有空格，这样写出来的文字是很难辨认的。</p>
+<p>下面是平假名表，以及字母标识的大致发音。如同大多数日语书籍一样，你需要从右向左、从上往下阅读。在日语里面，按照笔顺书写是很重要的，特别是汉字。因为手写体跟印刷体看起来有点不一样（就像字母 a，手写体和印刷体完全不同），你最好找一些手写字体教材来练习书写（见下面的链接）。另外我还想再重申一下准确发音的重要性。因为每个日语单词都是由这些假名音所组成，假名念不好的话日语发音准确性也就无从谈起了。</p>
+<table border="1" class="big">
+<caption>平假名 - 点击可以听录音<sub style="font-size: 11px">（译者注：想听的话可以点右上角去原网站听）</sub></caption>
+<tr>
+<th>n</th>
+<th>w</th>
+<th>r</th>
+<th>y</th>
+<th>m</th>
+<th>h</th>
+<th>n</th>
+<th>t</th>
+<th>s</th>
+<th>k</th>
+<th>&#160;</th>
+<th>&#160;</th>
+</tr>
+<tr align="center">
+<td><a href="" onclick="showModal('n'); return false;">ん</a><br /><span>(n)</span></td>
+<td><a href="" onclick="showModal('wa'); return false;">わ</a></td>
+<td><a href="" onclick="showModal('ra'); return false;">ら</a></td>
+<td><a href="" onclick="showModal('ya'); return false;">や</a></td>
+<td><a href="" onclick="showModal('ma'); return false;">ま</a></td>
+<td><a href="" onclick="showModal('ha'); return false;">は</a></td>
+<td><a href="" onclick="showModal('na'); return false;">な</a></td>
+<td><a href="" onclick="showModal('ta'); return false;">た</a></td>
+<td><a href="" onclick="showModal('sa'); return false;">さ</a></td>
+<td><a href="" onclick="showModal('ka'); return false;">か</a></td>
+<td><a href="" onclick="showModal('a'); return false;">あ</a></td>
+<th>a</th>
+</tr>
+<tr align="center">
+<td class="empty">&#160;</td>
+<td>ゐ*</td>
+<td><a href="" onclick="showModal('ri'); return false;">り</a></td>
+<td class="empty">&#160;</td>
+<td><a href="" onclick="showModal('mi'); return false;">み</a></td>
+<td><a href="" onclick="showModal('hi'); return false;">ひ</a></td>
+<td><a href="" onclick="showModal('ni'); return false;">に</a></td>
+<td><a href="" onclick="showModal('chi'); return false;">ち</a><br /><span>(chi)</span></td>
+<td><a href="" onclick="showModal('shi'); return false;">し</a><br /><span>(shi)</span></td>
+<td><a href="" onclick="showModal('ki'); return false;">き</a></td>
+<td><a href="" onclick="showModal('i'); return false;">い</a></td>
+<th>i</th>
+</tr>
+<tr align="center">
+<td class="empty">&#160;</td>
+<td class="empty">&#160;</td>
+<td><a href="" onclick="showModal('ru'); return false;">る</a></td>
+<td><a href="" onclick="showModal('yu'); return false;">ゆ</a></td>
+<td><a href="" onclick="showModal('mu'); return false;">む</a></td>
+<td><a href="" onclick="showModal('fu'); return false;">ふ</a><br /><span>(fu)</span></td>
+<td><a href="" onclick="showModal('nu'); return false;">ぬ</a></td>
+<td><a href="" onclick="showModal('tsu'); return false;">つ</a><br />(tsu)</td>
+<td><a href="" onclick="showModal('su'); return false;">す</a></td>
+<td><a href="" onclick="showModal('ku'); return false;">く</a></td>
+<td><a href="" onclick="showModal('u'); return false;">う</a></td>
+<th>u</th>
+</tr>
+<tr align="center">
+<td class="empty">&#160;</td>
+<td>ゑ*</td>
+<td><a href="" onclick="showModal('re'); return false;">れ</a></td>
+<td class="empty">&#160;</td>
+<td><a href="" onclick="showModal('me'); return false;">め</a></td>
+<td><a href="" onclick="showModal('he'); return false;">へ</a></td>
+<td><a href="" onclick="showModal('ne'); return false;">ね</a></td>
+<td><a href="" onclick="showModal('te'); return false;">て</a></td>
+<td><a href="" onclick="showModal('se'); return false;">せ</a></td>
+<td><a href="" onclick="showModal('ke'); return false;">け</a></td>
+<td><a href="" onclick="showModal('e'); return false;">え</a></td>
+<th>e</th>
+</tr>
+<tr align="center">
+<td class="empty">&#160;</td>
+<td><a href="" onclick="showModal('wo'); return false;">を</a><br />(o)</td>
+<td><a href="" onclick="showModal('ro'); return false;">ろ</a></td>
+<td><a href="" onclick="showModal('yo'); return false;">よ</a></td>
+<td><a href="" onclick="showModal('mo'); return false;">も</a></td>
+<td><a href="" onclick="showModal('ho'); return false;">ほ</a></td>
+<td><a href="" onclick="showModal('no'); return false;">の</a></td>
+<td><a href="" onclick="showModal('to'); return false;">と</a></td>
+<td><a href="" onclick="showModal('so'); return false;">そ</a></td>
+<td><a href="" onclick="showModal('ko'); return false;">こ</a></td>
+<td><a href="" onclick="showModal('o'); return false;">お</a></td>
+<th>o</th>
+</tr>
+</table>
+<p>* = 已不使用</p>
+<p>你也可以从 <a href="http://www.guidetojapanese.org/audio/basic_sounds.zip">http://www.guidetojapanese.org/audio/basic_sounds.zip</a> 下载到发音文件。</p>
+<p>平假名并不难掌握，也不难教，所以网上有各种学习资源，我也建议你把自己的发音录下来，跟标准音对比。</p>
+<p>练习书写平假名的时候，一定要记住笔顺<em><b><u><i>不能错</i></u></b></em>。你看我这么强调这一点，相信我，当你看到别人的草书时会知道我为什么一开始就告诫你这一点。只有大家都按照一样的笔顺书写，字符的「走向」才能保持一致。我<u>强烈</u>建议你一开始学习书写就注意这一点，以免养成坏习惯。虽然网上有很多工具帮助你学习平假名，最好的学习方法还是老办法：纸和笔。下面是一些很方便练习的田字格。</p>
+<ul>
+<li><a href="http://www.guidetojapanese.org/pdf/hiragana_trace_sheet.pdf">Hiragana trace sheets</a></li>
+<li><a href="http://japanese-lesson.com/characters/hiragana/hiragana_writing.html">japanese-lesson.com</a></li>
+<li><a href="http://happyfu-fu.com/hiroshiandsakura/ls_hiragana_stroke.html">Hiroshi &amp; Sakura</a></li>
+</ul>
+<p>&#8251; 顺便说下，有一首日语古诗叫做「いろは」经常用来作为平假名练习之用。这首诗包含了除「ん」之外的每个平假名（那时候大概还没有「ん」）。你可以从<a href="http://en.wikipedia.org/wiki/Iroha">这篇维基百科文章</a>中找到这首诗。如文中所述，有时候平假名还是按诗中的次序排列，所以有空你可以看看。</p>
+<div class="sumbox">
+<span class="summary">说明</span>
+<ol>
+<li>除了「し」、「ち」、「つ」、和 「ん」、之外，你可以从横纵表头直接组合出假名发音，比如「き」 的发音就是 / ki /，而「ゆ」 就是 / yu /，等等。</li>
+<li>你也许发现了，不是所有假名都是按照辅音系统发音的。如表中「ち」念成 / chi /，而「つ」念成 / tsu /。</li>
+<li>/ r / 或 / l / 音在英语中是没有对应发音的。你需要用舌头和上颚来配合发音。要特别注意这一列。</li>
+<li>要注意 / tsu / 和 / su / 的区别。</li>
+<li>「ん」是一个特别的字母，因为它不单用，也没有元音。它用于附加在其他字母后面发 / n / 音。比如「かん」就念成 / kan / 而不再是 / ka /，「まん」念成 / man / 而不是 / ma /，如此类推。</li>
+<li><u>笔顺一定要对！</u>用下面的资料来练习
+<ul>
+<li><a href="http://www.guidetojapanese.org/pdf/hiragana_trace_sheet.pdf">Hiragana trace sheets</a></li>
+<li><a href="http://japanese-lesson.com/characters/hiragana/hiragana_writing.html">japanese-lesson.com</a></li>
+<li><a href="http://happyfu-fu.com/hiroshiandsakura/ls_hiragana_stroke.html">Hiroshi &amp; Sakura</a></li>
+</ul>
+</li>
+</ol>
+</div>
+<h2 id="part2">浊音</h2>
+<p><iframe width="420" height="315" src="http://www.youtube.com/embed/Am-n2HVwVG4" frameborder="0" allowfullscreen=""></iframe></p>
+<p>记住了所有平假名的发音之后，还有一些音需要学习。以下五个辅音，写法是在假名右上角加上类似双引号的两点（称为「浊点」）或一个小圆圈（称为「半浊点」）。这样就出现了新的浑浊的、或者说不大清晰的辅音（理论上叫做浊辅音，或「濁り」，字面意思就是不清楚）。</p>
+<p>下表列出了所有浊辅音。</p>
+<table border="1" class="big">
+<caption>浊平假名</caption>
+<tr align="center">
+<th>p</th>
+<th>b</th>
+<th>d</th>
+<th>z</th>
+<th>g</th>
+<th>&#160;</th>
+</tr>
+<tr align="center">
+<td><a href="" onclick="playClip('pa'); return false;">ぱ</a></td>
+<td><a href="" onclick="playClip('ba'); return false;">ば</a></td>
+<td><a href="" onclick="playClip('da'); return false;">だ</a></td>
+<td><a href="" onclick="playClip('za'); return false;">ざ</a></td>
+<td><a href="" onclick="playClip('ga'); return false;">が</a></td>
+<th>a</th>
+</tr>
+<tr align="center">
+<td><a href="" onclick="playClip('pi'); return false;">ぴ</a></td>
+<td><a href="" onclick="playClip('bi'); return false;">び</a></td>
+<td><a href="" onclick="playClip('ji'); return false;">ぢ</a><br />(ji)</td>
+<td><a href="" onclick="playClip('ji'); return false;">じ</a><br />(ji)</td>
+<td><a href="" onclick="playClip('gi'); return false;">ぎ</a></td>
+<th>i</th>
+</tr>
+<tr align="center">
+<td><a href="" onclick="playClip('pu'); return false;">ぷ</a></td>
+<td><a href="" onclick="playClip('bu'); return false;">ぶ</a></td>
+<td><a href="" onclick="playClip('dzu'); return false;">づ</a><br />(dzu)</td>
+<td><a href="" onclick="playClip('zu'); return false;">ず</a></td>
+<td><a href="" onclick="playClip('gu'); return false;">ぐ</a></td>
+<th>u</th>
+</tr>
+<tr align="center">
+<td><a href="" onclick="playClip('pe'); return false;">ぺ</a></td>
+<td><a href="" onclick="playClip('be'); return false;">べ</a></td>
+<td><a href="" onclick="playClip('de'); return false;">で</a></td>
+<td><a href="" onclick="playClip('ze'); return false;">ぜ</a></td>
+<td><a href="" onclick="playClip('ge'); return false;">げ</a></td>
+<th>e</th>
+</tr>
+<tr align="center">
+<td><a href="" onclick="playClip('po'); return false;">ぽ</a></td>
+<td><a href="" onclick="playClip('bo'); return false;">ぼ</a></td>
+<td><a href="" onclick="playClip('do'); return false;">ど</a></td>
+<td><a href="" onclick="playClip('zo'); return false;">ぞ</a></td>
+<td><a href="" onclick="playClip('go'); return false;">ご</a></td>
+<th>o</th>
+</tr>
+</table>
+<div class="sumbox">
+<span class="summary">说明</span>
+<ul>
+<li>注意「ぢ」的发音跟「じ」是一样的，都是 / ji /，而「づ」的发音类似 / dzu /。</li>
+</ul>
+</div>
+<h2 id="part3">小号的「や」、「ゆ」、和「よ」</h2>
+<p><iframe width="420" height="315" src="http://www.youtube.com/embed/gjh8rHqLrfk" frameborder="0" allowfullscreen=""></iframe></p>
+<p>你也可以把辅音跟一个 / ya / yu / yo / 音连起来，做法就是把一个小号的「や」、「ゆ」、或者 「よ」放到每个元音的 / i / 列字母后面</p>
+<table border="1">
+<caption>平假名中所有小や、ゆ、和よ的组合</caption>
+<tr align="center">
+<th>p</th>
+<th>b</th>
+<th>j</th>
+<th>g</th>
+<th>r</th>
+<th>m</th>
+<th>h</th>
+<th>n</th>
+<th>c</th>
+<th>s</th>
+<th>k</th>
+<th>&#160;</th>
+</tr>
+<tr align="center">
+<td><a href="" onclick="playClip('pya'); return false;">ぴゃ</a></td>
+<td><a href="" onclick="playClip('bya'); return false;">びゃ</a></td>
+<td><a href="" onclick="playClip('jya'); return false;">じゃ</a></td>
+<td><a href="" onclick="playClip('gya'); return false;">ぎゃ</a></td>
+<td><a href="" onclick="playClip('rya'); return false;">りゃ</a></td>
+<td><a href="" onclick="playClip('mya'); return false;">みゃ</a></td>
+<td><a href="" onclick="playClip('hya'); return false;">ひゃ</a></td>
+<td><a href="" onclick="playClip('nya'); return false;">にゃ</a></td>
+<td><a href="" onclick="playClip('cha'); return false;">ちゃ</a></td>
+<td><a href="" onclick="playClip('sha'); return false;">しゃ</a></td>
+<td><a href="" onclick="playClip('kya'); return false;">きゃ</a></td>
+<th>ya</th>
+</tr>
+<tr align="center">
+<td><a href="" onclick="playClip('pyu'); return false;">ぴゅ</a></td>
+<td><a href="" onclick="playClip('byu'); return false;">びゅ</a></td>
+<td><a href="" onclick="playClip('jyu'); return false;">じゅ</a></td>
+<td><a href="" onclick="playClip('gyu'); return false;">ぎゅ</a></td>
+<td><a href="" onclick="playClip('ryu'); return false;">りゅ</a></td>
+<td><a href="" onclick="playClip('myu'); return false;">みゅ</a></td>
+<td><a href="" onclick="playClip('hyu'); return false;">ひゅ</a></td>
+<td><a href="" onclick="playClip('nyu'); return false;">にゅ</a></td>
+<td><a href="" onclick="playClip('chu'); return false;">ちゅ</a></td>
+<td><a href="" onclick="playClip('shu'); return false;">しゅ</a></td>
+<td><a href="" onclick="playClip('kyu'); return false;">きゅ</a></td>
+<th>yu</th>
+</tr>
+<tr align="center">
+<td><a href="" onclick="playClip('pyo'); return false;">ぴょ</a></td>
+<td><a href="" onclick="playClip('byo'); return false;">びょ</a></td>
+<td><a href="" onclick="playClip('jyo'); return false;">じょ</a></td>
+<td><a href="" onclick="playClip('gyo'); return false;">ぎょ</a></td>
+<td><a href="" onclick="playClip('ryo'); return false;">りょ</a></td>
+<td><a href="" onclick="playClip('myo'); return false;">みょ</a></td>
+<td><a href="" onclick="playClip('hyo'); return false;">ひょ</a></td>
+<td><a href="" onclick="playClip('nyo'); return false;">にょ</a></td>
+<td><a href="" onclick="playClip('cho'); return false;">ちょ</a></td>
+<td><a href="" onclick="playClip('sho'); return false;">しょ</a></td>
+<td><a href="" onclick="playClip('kyo'); return false;">きょ</a></td>
+<th>yo</th>
+</tr>
+</table>
+<div class="sumbox">
+<span class="summary">说明</span>
+<ol>
+<li>上表的发音规律跟前面表格一样，比如きゃ念作 / kya /。</li>
+<li>还需要注意的是因为「じ」念作 / ji /，所以所有这些「や」、「ゆ」、「よ」都要做相应变化，比如 / jya / jyu / jyo /。</li>
+<li>同理，「ち」念作 / cha / chu / cho / 而「し」念作 / sha / shu / sho /（当然你也可以认为仍然念成 / sya / syu / syo /。）</li>
+</ol>
+</div>
+<h2 id="part4">小号的「つ」</h2>
+<p>小号的「つ」放在两个字母之间时，后一个的辅音就被复制到前一个字母的结尾。例如，如果你把小号 「つ」放到「び」和「く」中间组合出「びっく」，那么辅音 / k / 就被带到了「び」后面，发音变为「bikku」。类似的，「はっぱ」念作「happa」，而「ろっく」念作「rokku」，以此类推。</p>
+<h3>示例</h3>
+<ol>
+<!--
+<li>トラ<em>ッ</em>ク (to-ra<em>k</em>-ku) <a href="torakku" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - truck</li>
+--><!--
+<li>トラ<em>ッ</em>ク (to-ra<em>k</em>-ku) <a href="torakku" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - truck</li>
+--><li>ざ<em>っ</em>し (za<em>s</em>-shi) <a href="zasshi" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 杂志（magazine）</li>
+<li>カ<em>ッ</em>プ (ka<em>p</em>-pu) <a href="kappu" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 杯子（cup）</li>
+</ol>
+<div class="sumbox">
+<span class="summary">说明</span>
+<ol>
+<li>小号「つ」的作用是把后一个字母的辅音复制到前一个字母后面。例如「がっき」 = 「ga<em>k</em>ki」。</li>
+<li>做了以上变化后，基本上都会产生一个「去声」<font size="-1">（译者注：广府话片和闽南语片的同学应该秒懂了）</font>，但注意去声要发对（第二个字母的辅音）。</li>
+</ol>
+</div>
+<h2 id="part5">长元音</h2>
+<p><iframe width="420" height="315" src="http://www.youtube.com/embed/SLP1BxU6AR4" frameborder="0" allowfullscreen=""></iframe></p>
+<p>哇，快学完了！我们最后再介绍一下长元音，也就是简单的拉长元音的发音。根据需要拉长的元音的不同，你可以在其后添加 「あ」、「い」、或者「う」，如下表所述。</p>
+<table border="1" cellpadding="5">
+<caption>拉长元音</caption>
+<tr align="center">
+<th>元音</th>
+<th>用于拉长的附加元音</th>
+</tr>
+<tr align="center">
+<td>/ a /</td>
+<td>あ</td>
+</tr>
+<tr align="center">
+<td>/ i / e /</td>
+<td>い</td>
+</tr>
+<tr align="center">
+<td>/ u / o /</td>
+<td>う</td>
+</tr>
+</table>
+<p>例如你想拉长「か」的发音，就可以在后面加一个「あ」，变成「かあ」。再举一些例子：「き &#8594; きい」、「く &#8594; くう」、「け &#8594; けい」、「こ &#8594; こう」、「さ &#8594; さあ」，依此类推。长元音的原理很简单，试着分别发音「か」和「あ」，然后再快速连读。。很快你就会发现好像是在拉长 / ka / 的发音时间。发长元音的时候，要记住其实是在发两个音。</p>
+<p>记住长元音一定要拉畅，否则「こうこう」（中学）就成了「ここ」（这里），或者「おばあさん」（祖母）就成了「おばさん」（中年妇女）！</p>
+<h3>示例</h3>
+<ol>
+<li>がくせ<em>い</em> (ga-ku-s<em>e</em>) <a href="gakusei" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 学生</li>
+<li>せんせ<em>い</em> (sen-s<em>e</em>) <a href="sensei" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 老师</li>
+<li>きょ<em>う</em> (ky<em>o</em>) <a href="kyou" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 今天</li>
+<li>おはよ<em>う</em> (o-ha-y<em>o</em>) <a href="ohayou" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 早安</li>
+<li>おか<em>あ</em>さん (o-k<em>a</em>-san) <a href="okaasan" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 母亲</li>
+</ol>
+<p>极少数情况下 / e / 元音也会用「え」来拉长，/ o / 元音也会用「お」来拉长。这种情况的例子包括 「おねえさん」、「おおい」、和「おおきい」。要注意这些例外情况，不过好在数量很少。</p>
+  <div id="book-navigation-97" class="book-navigation">
+    <ul class="menu"><li class="leaf first last"><a href="hiragana_ex.html">平假名练习</a></li>
+</ul>
+        <div class="page-links clear-block">
+              <a href="writing.html" class="page-previous" title="回上一页">&#8249; 日语书写系统</a>
+                    <a href="writing.html" class="page-up" title="回上一级页面">up</a>
+                    <a href="hiragana_ex.html" class="page-next" title="到下一页">平假名练习 &#8250;</a>
+          </div>
+    
+  </div>
+  </div>
+          <!-- node -->				</div></div></html>

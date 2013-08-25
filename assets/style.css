@@ -1,0 +1,771 @@
+@CHARSET "UTF-8";
+
+/* @file style.css
+ * General styles for Nitobe. http://drupal.org/projects/nitobe
+ *
+ * $Id: style.css,v 1.1.2.5 2010/10/23 23:07:12 shannonlucas Exp $
+ */
+ 
+ 
+.note { 
+	border: 1px black solid;
+	background-color: rgb(255,255,204);
+	margin: .5em;
+	padding: 1em;
+	text-align: center;
+	font-weight: bold;
+}
+.summary { 
+	color: rgb(153,0,0);
+	font-size: 1em;
+	font-weight: bold;
+}
+.sumbox { 
+	background-color: rgb(238,255,238);
+	border: 1px black dashed;
+	margin: 2em;
+	padding: 1em;
+}
+.plain { list-style: none; }
+
+.popup {
+	cursor: help;
+	text-decoration: none;
+    color: #00f;
+}
+span.popup:hover {
+	text-decoration:none;
+	color: rgb(159,20,26);
+}
+
+.answerline { border-bottom: 1px black solid; text-align: center; width: 10em}
+
+th {background-color: #FFFFDD; }
+
+.big {font-size: 1.8em;}
+
+li {margin-bottom: 4px;}
+
+/* ****************************************************************************
+ * Anchor links
+ * ************************************************************************* */
+a:link, a:visited {
+	color: #36C;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ed1a09;
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: #ccc 1px dotted;
+}
+
+/* ****************************************************************************
+ * Breaks and alignments
+ * ************************************************************************* */
+hr {
+  border: none;
+  height: 0px;
+  line-height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.break {
+  clear: both;
+  display: block; 
+}
+
+.rule-bottom {
+  background: #ccc url(images/background-light.gif) repeat 2px 0;
+  border: 0;
+  border-bottom: 1px solid #333;
+  height: 5px;
+  margin-bottom: 1em;
+  margin-top: 0;
+  padding: 0;
+}
+
+.rule-top {
+  background: #ccc url(images/background-light.gif) repeat 2px 0;
+  border: 0;
+  border-top: 1px solid #333;
+  height: 5px;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+
+.align-left { text-align: left; }
+
+.align-right { text-align: right; }
+
+.even { background-color: #fff; }
+
+img.align-left {
+  float: left;
+  margin: 0 1em 1em 0;
+  padding: 0;
+}
+
+img.align-right	{
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+/* ****************************************************************************
+ * Form styles
+ * ************************************************************************* */
+fieldset {
+  border: 1px solid #c8c8c8;
+  padding: 1em;	
+}
+
+fieldset>legend {
+  font-weight: bold;
+  padding-right: 0.5em;	
+}
+
+fieldset>legend a:link { text-decoration: none; }
+
+fieldset.collapsible>legend { border: 1px solid #c8c8c8; }
+
+fieldset.collapsed>legend { border: 1px solid #c8c8c8; }
+
+label { font-weight: bold; }
+
+input[disabled='disabled'] {
+  background-color: #aaa;
+  color: #666;
+  font-style: italic;
+}
+
+/* ****************************************************************************
+ * General page structure
+ * ************************************************************************* */
+ body.nitobe {
+  /* The body class is necessary so that WYSIWYG editors that don't specify a
+   * background for their bodies don't inherit the Nitobe background. */
+  background: #ccc url(images/background.gif) repeat;
+  color: #333;  
+}
+
+#page-wrapper {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  margin: 20px auto;
+  padding: 20px 0;
+  width: 980px;
+}
+
+#content { margin-bottom: 1em; }
+
+/* ****************************************************************************
+ * Header area
+ * ************************************************************************* */
+#title-group {
+  float: left;
+  margin-right: 10px;
+}
+
+#title-group img#logo { float: left; }
+
+#site-title {
+  display: inline;
+  margin: 0;
+  padding: 0;   
+}
+
+#header-area #title-group #site-title {
+  display: inline-block;
+  font-size: 3em;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;   
+}
+
+#header-area #title-group #site-title a {
+  font-weight: normal;
+  font-style: normal;
+  text-transform: lowercase;
+}
+
+#header-area #title-group #site-title a:link,
+#header-area #title-group #site-title a:hover,
+#header-area #title-group #site-title a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+#header-area #title-group #site-title span.alt-color { color:#ccc; }
+
+#site-slogan {
+  color: #c8c8c8;
+  display: block;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#no-menu-rule {
+  margin-bottom: 0;
+  margin-top: 4px;  
+}
+
+#masthead {
+  height: 118px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+/* ****************************************************************************
+ * Header navigation and tabs
+ * ************************************************************************* */
+#header-links, #tabs-wrapper {
+  background-color: #fff;
+  padding-top: 5px;
+}
+
+#tabs-wrapper { margin-bottom: 1em; }
+
+/* ****************************************************************************
+ * Primary tabs and navigation
+ * ************************************************************************* */
+ul#primary-nav, .tabs.primary {
+  background: #ccc url(images/background-light.gif) repeat;
+  border-bottom: 1px solid #333;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+ul#primary-nav.has-secondary,
+.tabs.primary.has-secondary { border: none; }
+
+ul#primary-nav li,
+.tabs.primary li {
+  display: inline;
+  line-height: 2.2em;
+}
+
+ul#primary-nav li a:link, 
+ul#primary-nav li a:hover, 
+ul#primary-nav li a:visited,
+.tabs.primary li a:link, 
+.tabs.primary li a:hover, 
+.tabs.primary li a:visited {
+  background: transparent;
+  border: none;
+  color: #333;
+  float: left;
+  font-weight: bold;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+ul#primary-nav li a:hover,
+.tabs.primary li a:hover {
+  background: #333 url(images/background-medium.gif) repeat;
+  color: #000;
+}
+
+ul#primary-nav li.active a,
+ul#primary-nav li.active a.active,
+ul#primary-nav li.active-trail a,
+ul#primary-nav li.active-trail a.active,
+.tabs.primary li.active a,
+.tabs.primary li.active a.active,
+.tabs.primary li.active-trail a,
+.tabs.primary li.active-trail a.active {
+  background: #333 url(images/background-dark.gif) repeat;
+  color: #fff;
+}
+
+ul#primary-nav li.active a:hover,
+ul#primary-nav li.active a.active:hover,
+.tabs.primary li.active a:hover,
+.tabs.primary li.active a.active:hover {
+  background: #333 url(images/background-dark.gif) repeat;
+  color: #fff;
+}
+
+ul#primary-nav li.current_page_item a,
+.tabs.primary li.active a {
+  background: #333 url(images/background-dark.gif) repeat;
+  color: #fff;
+}
+
+/* ****************************************************************************
+ * Secondary tabs
+ * ************************************************************************* */
+ul#secondary-nav,
+.tabs.secondary {
+  background: #333 url(images/background-dark.gif) repeat;
+  border-bottom: 1px solid #333;
+  color: #333;
+  display: block;   
+  height: auto;
+  line-height: normal;
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 2px 0;
+  text-transform: lowercase;
+  white-space: normal;
+}
+
+ul#secondary-nav li,
+.tabs.secondary li {
+  border: none;
+  line-height: 2.2em;
+  margin: 0 0;
+  padding: 0;
+}
+
+ul#secondary-nav li a,
+.tabs.secondary li a {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+ul#secondary-nav li a.active,
+.tabs.secondary li a.active { color: #fff;}
+
+ul#secondary-nav li a:hover,
+.tabs.secondary li a:hover {
+  color: #4cf;
+  text-decoration: none;
+}
+
+ul#secondary-nav li.active a:hover,
+.tabs.secondary li.active a:hover { color: #fff; }
+
+/* ****************************************************************************
+ * Pager
+ * ************************************************************************* */
+ul.pager {
+  line-height: 250%;
+  margin: 1em 1em;
+}
+
+ul.pager li {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+ul.pager li a {
+  border: 1px solid #ccc;
+  color: #36C;
+  padding: 0.25em 0.5em;
+}
+
+ul.pager li a:hover {
+  background: #222 url(images/background-dark.gif) repeat;
+  border: 1px solid #222;
+  color: #4cf;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+}
+
+ul.pager li.pager-current {
+  background: #222 url(images/background-dark.gif) repeat;
+  border: 1px solid #222;
+  color: #fff;
+  padding: 0.25em 0.5em;
+}
+
+/* ****************************************************************************
+ * Page headlines and mision
+ * ************************************************************************* */
+#mission {
+  color: #c8c8c8;
+  display: block;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0 0 2em 0;
+  padding: 0;   
+}
+
+#page-headline {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.5em;
+}
+
+#page-headline h1#page-title {
+  color: #333;
+  display: inline-block;
+  float: left;
+  font-size: 2.2em;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  /*text-transform: lowercase;*/
+  /*width: 66%;*/
+}
+
+#page-headline .timestamp {
+  color: #ccc;
+  float: left;
+  font-size: 2em;
+  font-weight: normal;
+  letter-spacing: -1px;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  text-transform: lowercase;
+  vertical-align: bottom;
+  width: 33%;
+}
+
+/* ****************************************************************************
+ * Nodes
+ * ************************************************************************* */
+.node {
+  clear: both;
+  margin-bottom: 3em;
+}
+
+.teaser .content p { margin-bottom: 0; }
+
+.readmore { text-transform: lowercase; }
+
+.teaser .content p+p { margin-top: 20px; }
+
+.node .node-headline {
+  padding: 0;
+  width: 100%;
+}
+
+.node .node-headline h2 {
+  display: inline-block;
+  float: left;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  text-transform: lowercase;
+  width: 66%;
+}
+
+.node .node-headline {
+  border-bottom: 1px solid #c8c8c8;
+  margin-bottom: 0.5em;
+}
+
+.node .node-headline h2 a:link, .node .node-headline h2 a:visited,
+h3.searchresult a:link, h3.searchresult a:visited {
+  color: #222;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.node .node-headline h2 a:hover,
+h3.searchresult a:hover {
+  color: #ed1a09;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.node .node-headline .timestamp {
+  color: #c8c8c8;
+  float: left;
+  font-size: 2em;
+  font-weight: normal;
+  letter-spacing: -1px;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  text-transform: lowercase;
+  vertical-align: bottom;
+  width: 33%;
+}
+
+.node-author {
+  color: #999;
+  font-style: italic;
+  margin: -0.4em 0 0.4em 0;
+  padding: 0;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.node .content .user-picture {
+  display: inline-block;
+  float: right;
+  margin: 0 0 0 0.75em;
+  padding: 0;
+}
+
+.node .content {
+  clear: both;
+  padding: 0;
+}
+
+.meta {
+  background-color: #f9f9f9;
+  color: #888;
+  font-style: italic;
+  padding: 2px 5px;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.meta ul.inline,
+.meta ul.inline li {
+  display: inline;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-comment-help {
+  color: #888;
+  text-align: right;
+}
+
+/* ****************************************************************************
+ * The bottom blocks area
+ * ************************************************************************* */
+#bottom-blocks {
+  margin-top: 1.5em;
+  overflow: auto;
+}
+
+/* ****************************************************************************
+ * Messages and help
+ * ************************************************************************* */
+div.help, div.messages.status, div.messages.error, div.messages.warning {
+  font-style: normal;
+  padding: 0.8em; margin-bottom: 1.6em; border: 1px solid #ddd;
+}
+
+div.help p, div.messages.status p, div.messages.error p { margin-bottom: 0; }
+
+div.help p+p, div.messages.status p+p, div.messages.error p+p { margin-top: 2em; }
+
+div.help {
+  background: #e5ecf9;
+  color:#222;
+}
+
+div.messages.status {
+  background: #cceecc;
+  border-color:#c6d880;
+  color:#222;
+}
+
+
+div.messages.error {
+  background: #eeb9b9;
+  border-color:#fbc2c4;
+  color:#222;
+}
+
+div.messages.warning {
+  background-color: #ffffdd;
+  border: 1px solid #f0c020;
+  color: #222;
+}
+
+/* ****************************************************************************
+ * Blocks
+ * ************************************************************************* */
+.block { margin-bottom: 1.5em; }
+
+div.block h2, div.block-block h2,
+div.block h3, div.block-block h3 {
+  border-bottom: 1px solid #333;
+  color: #555;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 6px;
+  margin-top: 0.5em;
+  text-transform: lowercase;
+}
+
+.block ul, .block ul.menu {
+  list-style-position: inside;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.block ul li, .block ul.menu li {
+  border-bottom: 1px solid #f2f2f2;
+  list-style-position: inside;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.block ul.menu li ul.menu li { margin-left: 1em; }
+
+.block ul.menu li ul.menu li.last,
+.block ul.menu li ul.menu li ul.menu li.last { border: 0; }
+
+/* ****************************************************************************
+ * Comment Core
+ * ************************************************************************* */
+.indented { margin-left: 25px; } /* LTR */
+
+.comment { margin-bottom: 1.5em; }
+
+.comment .content {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  padding: 1em 1em 0 1em;
+}
+
+.comment .content h3 a {
+  color: #222;
+  text-decoration: none;
+}
+
+.comment .content h3 a:hover { color: #ed1a09; }
+
+.comment .content .user-picture {
+  float: left;
+  margin: 0 0.75em 0 0;
+}
+
+.comment.odd .content { background-color: #eeeeee; }
+
+.comment.even .content { background: #fff; }
+
+.comment.original-author .content { background: #e5ecf9; }
+
+/* ****************************************************************************
+ * Comment meta data
+ * ************************************************************************* */
+.comment .comment-meta {
+  margin: 0;
+  padding: 9px 1em 0 1em;
+}
+
+.comment .comment-meta .author-date { font-style: italic; }
+
+.comment .comment-meta .author-date a { font-weight: bold; }
+
+.comment .comment-meta ul.links { display: block; }
+
+.comment .comment-meta ul.links li {
+  margin: 0;
+  padding: 0;
+}
+
+.comment.even .comment-meta {
+  background: #fff url(images/comment-even.gif) no-repeat left top;
+}
+
+.comment.odd .comment-meta {
+  background: #fff url(images/comment-odd.gif) no-repeat left top;
+}
+
+.comment.original-author .comment-meta {
+  background: #fff url(images/comment-author.gif) no-repeat left top;
+}
+
+.comment-unpublished { background: #fff4f4; }
+  
+.preview .comment { background: #ffffea; }
+
+/* ****************************************************************************
+ * Comment controls
+ * ************************************************************************* */
+#comment-controls, #comment-controls-1 { margin-bottom: 1.5em; }
+
+#comment-controls .description, #comment-controls-1 .description {
+  font-style: italic;
+  padding-top: 0.5em;
+}
+
+/* ****************************************************************************
+ * Book tweaks
+ * ************************************************************************* */
+div.book-navigation { margin-bottom: 1.5em; }
+
+div.book-navigation ul.menu {
+  border-color: #ccc;
+  list-style-position: inside;
+  margin: 0px;
+  padding: 0 0 0.5em 0;
+  width: 100%;
+}
+
+div.book-navigation div.page-links {
+  border-color: #ccc;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* ****************************************************************************
+ * Forum tweaks
+ * ************************************************************************* */
+div.forum-topic-navigation {
+  border-color: #ccc;
+  margin-bottom: 1.5em;
+}
+
+div.forum-topic-navigation a.topic-previous { 
+  float: left;
+  text-align: left;
+  width: 50%;
+}
+
+div.forum-topic-navigation a.topic-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/* ****************************************************************************
+ * Theme search box
+ * ************************************************************************* */
+#search-top #search-theme-form div #search .form-item label { display: none; }
+
+#search-top { text-align: right; }
+
+/* ****************************************************************************
+ * Maintenance page
+ * ************************************************************************* */
+body.in-maintenance #page-wrapper #content-area #content {
+  padding-bottom: 5em;
+  margin-bottom: 5em;  
+}
+
+/* ****************************************************************************
+ * Admin area styles
+ * ************************************************************************* */
+div.admin-panel { margin-bottom: 2em; }
+
+div.admin-panel h3 { margin-bottom: 0.25em; }
+
+/* ****************************************************************************
+ * Admin formatting fix from the NineSixty theme.
+ * ************************************************************************* */
+div.admin-panel { padding: 0; }
+
+div.admin-panel .body { padding: 0 !important; }
+
+div.admin .left, div.admin .right {
+  margin-left: 0;
+  margin-right: 0;
+  width: 50%;
+}
+
+div.admin .right .admin-panel { margin-left: 10px; }

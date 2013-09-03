@@ -18,7 +18,7 @@ body {
         "Liberation Sans", sans-serif;
 }
 
-em { 
+em, em .popup { 
 	color: rgb(255,119,51);
 	font-style: normal;
 }

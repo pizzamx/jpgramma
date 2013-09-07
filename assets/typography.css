@@ -211,7 +211,7 @@ table {
   width: 100%;
 }
 
-th { font-weight: bold; }
+th { font-weight: bold; text-align: center; }
 
 thead th, thead td {
   background: #c3d9ff;

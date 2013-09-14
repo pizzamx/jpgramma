@@ -19,7 +19,7 @@ body {
 }
 
 em, em .popup { 
-	color: rgb(255,119,51);
+	border-bottom: 5px solid rgb(255,119,51);
 	font-style: normal;
 }
 

@@ -31,11 +31,13 @@
 .popup {
 	cursor: help;
 	text-decoration: none;
-    color: #00f;
+    color: #fff;
+    background: #24ade2;
+    margin: 0 2px;
 }
 span.popup:hover {
 	text-decoration:none;
-	color: rgb(159,20,26);
+    background: #0092d1;
 }
 
 .answerline { border-bottom: 1px black solid; text-align: center; width: 10em}

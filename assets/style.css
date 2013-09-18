@@ -33,7 +33,8 @@
 	text-decoration: none;
     color: #fff;
     background: #24ade2;
-    margin: 0 2px;
+    margin: 0 1px;
+    padding: 0 3px;
 }
 span.popup:hover {
 	text-decoration:none;

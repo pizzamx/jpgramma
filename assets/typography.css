@@ -89,7 +89,7 @@ big, .large {
 
 b, strong { font-weight: bold; }
 
-dfn, i { font-style: italic; }
+dfn, i { text-decoration: underline; font-style: normal; }
 
 dfn { font-weight: bold; }
 
@@ -194,7 +194,7 @@ q:after {
 /* ****************************************************************************
  * Lists
  * ************************************************************************* */
-li ul, li ol { margin:0 1.5em; }
+li ul, li ol { margin:0; }
 ul, ol       { margin: 0 1.5em 1.5em 1.5em; }
 ul           { list-style-type: disc; }
 ol           { list-style-type: decimal; }

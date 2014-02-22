@@ -20,6 +20,7 @@
 	font-size: 1em;
 	font-weight: bold;
 }
+.remark { font-size: 0.8em; }
 .sumbox { 
 	background-color: rgb(238,255,238);
 	border: 1px black dashed;

@@ -44,7 +44,7 @@ function toggleSpoilers() {
   $(".spoiler").toggleClass("reveal");
 }
 
-jQuery.extend(Drupal.settings, { "basePath"："/learn/", "googleanalytics"：{ "trackOutbound"：1, "trackMailto"：1, "trackDownload"：1, "trackDownloadExtensions"："7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" } });
+jQuery.extend(Drupal.settings, { "basePath":"/learn/", "googleanalytics":{ "trackOutbound":1, "trackMailto":1, "trackDownload":1, "trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" } });
 </script></head>
 <body><div id="content-area" class="container-16"><a href="http://www.guidetojapanese.org/learn/grammar/hiragana" style="float:right">本页原文</a>
 <div id="content" class="grid-12">
@@ -53,20 +53,20 @@ jQuery.extend(Drupal.settings, { "basePath"："/learn/", "googleanalytics"：{ "
 															<div id="node-159" class="node  node-book clear-block">
   <div class="content clear-block">
         	<div class="node-author">作者：Tae Kim</div>
-            <link rel="stylesheet" type="text/css" href="/scripts/simplemodal.css" media="screen" />
-<script type="text/javascript" src="/scripts/jquery.simplemodal-1.3.4.min.js"></script><script type="text/javascript">
+            <link rel="stylesheet" type="text/css" href="scripts/simplemodal.css" media="screen" />
+<script type="text/javascript" src="scripts/jquery.simplemodal-1.3.4.min.js"></script><script type="text/javascript">
 
 function showModal(char) {
-$('#stroke').attr('src','/images/hiragana/'+char+'.gif');
+    $('#stroke').attr('src','images/hiragana/'+char+'.gif');
 
-var fmt = '.mp3';
+    var fmt = '.mp3';
 
-if ($.browser.mozilla) {
-fmt = '.ogg';
-}
+    if ($.browser.mozilla) {
+        fmt = '.ogg';
+    }
 
-$('#clip').attr('src','/audio/'+char+fmt).load();
-$('#basic-modal-content').modal({overlayClose:true});
+    $('#clip').attr('src','audio/'+char+fmt).load();
+    $('#basic-modal-content').modal({overlayClose:true});
 }
 
 function playClip(char) {
@@ -77,7 +77,7 @@ if ($.browser.mozilla) {
 fmt = '.ogg';
 }
 
-$('#clip').attr('src','/audio/'+char+fmt).load();
+$('#clip').attr('src','audio/'+char+fmt).load();
 
 var clip = document.getElementById("clip");
 clip.play()
@@ -94,7 +94,7 @@ if ($.browser.mozilla) {
 fmt = '.ogg';
 }
 
-$('#clip_inline').attr('src','/audio/'+char+fmt).load();
+$('#clip_inline').attr('src','audio/'+char+fmt).load();
 
 var clip_inline = document.getElementById("clip_inline");
 clip_inline.play();
@@ -104,27 +104,27 @@ clip_inline.play();
 $(document).ready(function() {
 $('.playIcon').find('img').hover(
   function () {
-    if ($(this).attr('src') == '/images/play.png') {
-      $(this).attr('src', '/images/play_hover.png');
+    if ($(this).attr('src') == 'images/play.png') {
+      $(this).attr('src', 'images/play_hover.png');
     }
   },
   function () {
-    if ($(this).attr('src') == '/images/play_hover.png') {
-      $(this).attr('src', '/images/play.png');
+    if ($(this).attr('src') == 'images/play_hover.png') {
+      $(this).attr('src', 'images/play.png');
     }
   }
 );
 
 $('.playIcon').click(
   function () {
-    $(this).find('img').attr('src','/images/play_pressed.png').addClass('playing');
+    $(this).find('img').attr('src','images/play_pressed.png').addClass('playing');
     playclip_inline($(this).attr('href'));
     return false;
   }
 );
 
 $('#clip_inline').get(0).addEventListener("ended", function() {
-  $('.playing').attr('src','/images/play.png').removeClass('playing'); }, true);
+  $('.playing').attr('src','images/play.png').removeClass('playing'); }, true);
 
 });
 </script><p>
@@ -132,7 +132,7 @@ $('#clip_inline').get(0).addEventListener("ended", function() {
 <p><i>平假名</i>是最基础的日语发音单元。它代表了日语里面的每一个发音，所以理论上你可以使用平假名书写所有日语。但是因为日语书面语没有空格，这样写出来的文字是很难辨认的。</p>
 <p>下面是平假名表，以及字母标识的大致发音。如同大多数日语书籍一样，你需要从右向左、从上往下阅读。在日语里面，按照笔顺书写是很重要的，特别是汉字。因为手写体跟印刷体看起来有点不一样（就像字母 a，手写体和印刷体完全不同），你最好找一些手写字体教材来练习书写（见下面的链接）。另外我还想再重申一下准确发音的重要性。因为每个日语单词都是由这些假名音所组成，假名念不好的话日语发音准确性也就无从谈起了。</p>
 <table border="1" class="big">
-<caption>平假名 - 点击可以听录音<sub style="font-size：11px">（译者注：想听的话可以点右上角去原网站听）</sub></caption>
+<caption>平假名 - 点击可以听录音</caption>
 <tr>
 <th>n</th>
 <th>w</th>
@@ -231,11 +231,11 @@ $('#clip_inline').get(0).addEventListener("ended", function() {
 <div class="sumbox">
 <span class="summary">说明</span>
 <ol>
-<li>除了「し」、「ち」、「つ」、和 「ん」、之外，你可以从横纵表头直接组合出假名发音，比如「き」 的发音就是 / ki /，而「ゆ」 就是 / yu /，等等。</li>
+<li>除了「し」、「ち」、「つ」、和 「ん」之外，你可以从横纵表头直接组合出假名发音，比如「き」 的发音就是 / ki /，而「ゆ」 就是 / yu /，等等。</li>
 <li>你也许发现了，不是所有假名都是按照辅音系统发音的。如表中「ち」念成 / chi /，而「つ」念成 / tsu /。</li>
 <li>/ r / 或 / l / 音在英语中是没有对应发音的。你需要用舌头和上颚来配合发音。要特别注意这一列。</li>
 <li>要注意 / tsu / 和 / su / 的区别。</li>
-<li>「ん」是一个特别的假名，因为它不单用，也没有元音。它用于附加在其他假名后面发 / n / 音。比如「かん」就念成 / kan / 而不再是 / ka /，「まん」念成 / man / 而不是 / ma /，如此类推。</li>
+<li>「ん」是一个特别的假名，因为它不单用，也没有元音。它用于附加在其他假名后面发 / n / 音。比如かん就念成 / kan / 而不再是 / ka /，まん念成 / man / 而不是 / ma /，如此类推。</li>
 <li><u>笔顺一定要对！</u>用下面的资料来练习
 <ul>
 <li><a href="http://www.guidetojapanese.org/pdf/hiragana_trace_sheet.pdf">Hiragana trace sheets</a></li>
@@ -377,15 +377,15 @@ $('#clip_inline').get(0).addEventListener("ended", function() {
 </ol>
 </div>
 <h2 id="part4">小号的「つ」</h2>
-<p>小号的「つ」放在两个假名之间时，后一个的辅音就被复制到前一个假名的结尾。例如，如果你把小号 「つ」放到「び」和「く」中间组合出「びっく」，那么辅音 / k / 就被带到了「び」后面，发音变为「bikku」。类似的，「はっぱ」念作「happa」，而「ろっく」念作「rokku」，以此类推。</p>
+<p>小号的「つ」放在两个假名之间时，后一个的辅音就被复制到前一个假名的结尾。例如，如果你把小号「つ」放到「び」和「く」中间组合出「びっく」，那么辅音 / k / 就被带到了「び」后面，发音变为 "bikku"。类似的，「はっぱ」念作 "happa"，而「ろっく」念作 "rokku"，以此类推。</p>
 <h3>示例</h3>
 <ol>
 <!--
-<li>トラ<em>ッ</em>ク (to-ra<em>k</em>-ku) <a href="torakku" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - truck</li>
+<li>トラ<em>ッ</em>ク (to-ra<em>k</em>-ku) <a href="torakku" class="playIcon"><img src="images/play.png" alt="play" style="position:relative; top:3px;" /></a> - truck</li>
 --><!--
-<li>トラ<em>ッ</em>ク (to-ra<em>k</em>-ku) <a href="torakku" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - truck</li>
---><li>ざ<em>っ</em>し (za<em>s</em>-shi) <a href="zasshi" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 杂志（magazine）</li>
-<li>カ<em>ッ</em>プ (ka<em>p</em>-pu) <a href="kappu" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 杯子（cup）</li>
+<li>トラ<em>ッ</em>ク (to-ra<em>k</em>-ku) <a href="torakku" class="playIcon"><img src="images/play.png" alt="play" style="position:relative; top:3px;" /></a> - truck</li>
+--><li>ざ<em>っ</em>し (za<em>s</em>-shi) <a href="zasshi" class="playIcon"><img src="images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 杂志（magazine）</li>
+<li>カ<em>ッ</em>プ (ka<em>p</em>-pu) <a href="kappu" class="playIcon"><img src="images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 杯子（cup）</li>
 </ol>
 <div class="sumbox">
 <span class="summary">说明</span>
@@ -396,7 +396,7 @@ $('#clip_inline').get(0).addEventListener("ended", function() {
 </div>
 <h2 id="part5">长元音</h2>
 <p><iframe width="420" height="315" src="http://www.youtube.com/embed/SLP1BxU6AR4" frameborder="0" allowfullscreen=""></iframe></p>
-<p>哇，快学完了！我们最后再介绍一下长元音，也就是简单的拉长元音的发音。根据需要拉长的元音的不同，你可以在其后添加 「あ」、「い」、或者「う」，如下表所述。</p>
+<p>哇，快学完了！我们最后再介绍一下长元音，也就是简单的拉长元音的发音。根据需要拉长的元音的不同，你可以在其后添加 「あ」、「い」或者「う」，如下表所述。</p>
 <table border="1" cellpadding="5">
 <caption>拉长元音</caption>
 <tr align="center">
@@ -416,17 +416,17 @@ $('#clip_inline').get(0).addEventListener("ended", function() {
 <td>う</td>
 </tr>
 </table>
-<p>例如你想拉长「か」的发音，就可以在后面加一个「あ」，变成「かあ」。再举一些例子：「き &#8594; きい」、「く &#8594; くう」、「け &#8594; けい」、「こ &#8594; こう」、「さ &#8594; さあ」，依此类推。长元音的原理很简单，试着分别发音「か」和「あ」，然后再快速连读。。很快你就会发现好像是在拉长 / ka / 的发音时间。发长元音的时候，要记住其实是在发两个音。</p>
-<p>记住长元音一定要拉畅，否则「こうこう」（中学）就成了「ここ」（这里），或者「おばあさん」（祖母）就成了「おばさん」（中年妇女）！</p>
+<p>例如你想拉长「か」的发音，就可以在后面加一个「あ」，变成「かあ」。再举一些例子：「き &#8594; きい」、「く &#8594; くう」、「け &#8594; けい」、「こ &#8594; こう」、「さ &#8594; さあ」，依此类推。长元音的原理很简单，试着分别发音「か」和「あ」，然后再快速连读。很快你就会发现好像是在拉长 / ka / 的发音时间。发长元音的时候，要记住其实是在发两个音。</p>
+<p>记住长元音一定要拉长，否则「こうこう」（中学）就成了「ここ」（这里），或者「おばあさん」（祖母）就成了「おばさん」（中年妇女）！</p>
 <h3>示例</h3>
 <ol>
-<li>がくせ<em>い</em> (ga-ku-s<em>e</em>) <a href="gakusei" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 学生</li>
-<li>せんせ<em>い</em> (sen-s<em>e</em>) <a href="sensei" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 老师</li>
-<li>きょ<em>う</em> (ky<em>o</em>) <a href="kyou" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 今天</li>
-<li>おはよ<em>う</em> (o-ha-y<em>o</em>) <a href="ohayou" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 早安</li>
-<li>おか<em>あ</em>さん (o-k<em>a</em>-san) <a href="okaasan" class="playIcon"><img src="/images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 母亲</li>
+<li>がくせ<em>い</em> (ga-ku-s<em>e</em>) <a href="gakusei" class="playIcon"><img src="images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 学生</li>
+<li>せんせ<em>い</em> (sen-s<em>e</em>) <a href="sensei" class="playIcon"><img src="images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 老师</li>
+<li>きょ<em>う</em> (ky<em>o</em>) <a href="kyou" class="playIcon"><img src="images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 今天</li>
+<li>おはよ<em>う</em> (o-ha-y<em>o</em>) <a href="ohayou" class="playIcon"><img src="images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 早安</li>
+<li>おか<em>あ</em>さん (o-k<em>a</em>-san) <a href="okaasan" class="playIcon"><img src="images/play.png" alt="play" style="position:relative; top:3px;" /></a> - 母亲</li>
 </ol>
-<p>极少数情况下 / e / 元音也会用「え」来拉长，/ o / 元音也会用「お」来拉长。这种情况的例子包括 「おねえさん」、「おおい」、和「おおきい」。要注意这些例外情况，不过好在数量很少。</p>
+<p>极少数情况下 / e / 元音也会用「え」来拉长，/ o / 元音也会用「お」来拉长。这种情况的例子包括 「おねえさん」、「おおい」和「おおきい」。要注意这些例外情况，不过好在数量很少。</p>
   <div id="book-navigation-97" class="book-navigation">
     <ul class="menu"><li class="leaf first last"><a href="hiragana_ex.html">平假名练习</a></li>
 </ul>

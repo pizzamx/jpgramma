@@ -4,15 +4,10 @@
  * Typography styles for Nitobe.
  *
  * $Id: typography.css,v 1.1.2.2 2009/08/01 17:58:31 shannonlucas Exp $
-html {
-        font-size : 20px;
-    }
-    @media only screen and (min-width: 641px){
-        html {
-            font-size: 16px;
-        }
-    }
  */
+html {
+    font-size : 20px;
+}
 
 body {
   font-family: "Noto Sans CJK SC", "Hiragino Sans GB", "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, FreeSans,  "Liberation Sans", sans-serif;

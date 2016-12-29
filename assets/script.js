@@ -32,3 +32,18 @@ $(document).ready(function(){
         $(this).attr('title', "");
     });
 });
+
+function flip(targetID) {
+  $("#"+targetID).toggle();
+}
+
+function toggleAll(targetID) {
+  $("#"+targetID+" .hide").toggle("slow");
+}
+function toggle(targetID) {
+  $("#"+targetID+" .toggle").toggle("slow");
+}
+
+function toggleSpoilers() {
+  $(".spoiler").toggleClass("reveal");
+}

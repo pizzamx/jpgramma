@@ -1,10 +1,36 @@
+
+/**
+ * @file typography.css
+ * Typography styles for Nitobe.
+ *
+ * $Id: typography.css,v 1.1.2.2 2009/08/01 17:58:31 shannonlucas Exp $
+html {
+        font-size : 20px;
+    }
+    @media only screen and (min-width: 641px){
+        html {
+            font-size: 16px;
+        }
+    }
+ */
+
+body {
+  font-family: "Noto Sans CJK SC", "Hiragino Sans GB", "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, FreeSans,  "Liberation Sans", sans-serif;
+}
+
+em .popup { 
+	border-bottom: 5px solid rgb(255,119,51);
+}
+
+
+
 .popup {
 	cursor: help;
 	text-decoration: none;
     color: #fff;
     background: #24ade2;
-    margin: 0 1px;
-    padding: 0 3px;
+    margin: 0.1rem;
+    padding: 0.1rem;
 }
 span.popup:hover {
 	text-decoration:none;
@@ -33,6 +59,7 @@ li {margin-bottom: 4px;}
     background: #444;
     padding: 5px;
     top: 0; 
+    opacity: 100;
     left: 0; 
     z-index: 3; 
     display: none; 

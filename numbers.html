@@ -12,19 +12,33 @@
         <script type="text/javascript" src="assets/script.js?O"></script>
     </head>
 <body>
-    <div class="row">
-        <div class="col-xs-9">
-            <ol class="breadcrumb">
-                <li class="active"><a href="http://www.guidetojapanese.org/learn/">Home</a></li>
+
+
+
+<div id="content-area" class="container container-16">
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#header-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.guidetojapanese.org/learn/">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="header-navbar-collapse">
+            <ul class="nav navbar-nav">
                 <li><a href="index.html">日语语法指南</a></li>
                 <li><a href="essential.html">语法精要</a></li>
-            </ol>
+                <li><a class="pull-right" href="http://www.guidetojapanese.org/learn/grammar/numbers">本页原文</a></li>
+            </ul>
         </div>
-        <div class="col-xs-3">
-            <a href="http://www.guidetojapanese.org/learn/grammar/numbers">本页原文</a>
         </div>
-    </div>
-<div id="content-area" class="container container-16">
+    </nav>
+
         				<div id="page-headline" class="clear-block">
     					    <h1 id="page-title">数字和计数</h1>    					              				</div><!-- #page-headline -->
 															<div id="node-130" class="node  node-book clear-block">
@@ -33,19 +47,14 @@
             <p>日语里面数字和计数很难，足以单开一节来讲。首先，日语数字是按万位分组而非千位的，所以换算到英文很麻烦。另外，日语还有量词的概念，数不同的物体、动物或人要用不同的量词。我会介绍一些最常用最普通的量词，以后就要靠你自己了。说实话，量词可能是唯一会让你想打退堂鼓的知识点了，不是吓唬你。本节我建议你一次看一点，因为知识点太多了。</p>
 <h2 id="part2">数字系统</h2>
 <p>日语里面数字是按万位分组的，所以 10,000,000 其实是按照 1000,0000 来理解的。不过多亏西方文化的强力侵入以及数字的标准化推广，书写的时候还是按千位分组的。下面是零到十。</p>
-<table class="table .table-condensed">
-<caption>汉字，以及 1 到 10 的读法</caption>
+<table class="table table-condensed">
+<caption>汉字，以及 1 到 5 的读法</caption>
 <tr align="center">
 <td>1</td>
 <td>2</td>
 <td>3</td>
 <td>4</td>
 <td>5</td>
-<td>6</td>
-<td>7</td>
-<td>8</td>
-<td>9</td>
-<td>10</td>
 </tr>
 <tr align="center">
 <td><span title="いち - 一" class="popup">一</span></td>
@@ -53,11 +62,6 @@
 <td><span title="さん - 三" class="popup">三</span></td>
 <td><span title="し、よん - 四" class="popup">四</span></td>
 <td><span title="ご - 五" class="popup">五</span></td>
-<td><span title="ろく - 六" class="popup">六</span></td>
-<td><span title="しち、なな - 七" class="popup">七</span></td>
-<td><span title="はち - 八" class="popup">八</span></td>
-<td><span title="きゅう - 九" class="popup">九</span></td>
-<td><span title="じゅう - 十" class="popup">十</span></td>
 </tr>
 <tr align="center">
 <td><span title="いち - 一" class="popup">いち</span></td>
@@ -65,6 +69,25 @@
 <td><span title="さん - 三" class="popup">さん</span></td>
 <td><span title="し - 四" class="popup">し</span>／<span title="よん - 四" class="popup">よん</span></td>
 <td><span title="ご - 五" class="popup">ご</span></td>
+</tr>
+</table>
+<table class="table table-condensed">
+<caption>汉字，以及 6 到 10 的读法</caption>
+<tr align="center">
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr align="center">
+<td><span title="ろく - 六" class="popup">六</span></td>
+<td><span title="しち、なな - 七" class="popup">七</span></td>
+<td><span title="はち - 八" class="popup">八</span></td>
+<td><span title="きゅう - 九" class="popup">九</span></td>
+<td><span title="じゅう - 十" class="popup">十</span></td>
+</tr>
+<tr align="center">
 <td><span title="ろく - 六" class="popup">ろく</span></td>
 <td><span title="しち - 七" class="popup">しち</span>／<span title="なな - 七" class="popup">なな</span></td>
 <td><span title="はち - 八" class="popup">はち</span></td>
@@ -90,7 +113,7 @@
 </p>
 <h3>超过 99 的数字</h3>
 <p>下面是更大的数字：</p>
-<table border="1">
+<table class="table table-condensed">
 <tr align="center">
 <th>数字</th>
 <td>100</td>
@@ -118,9 +141,9 @@
 </table>
 <p>注意到 10^4 和 10^8 之间，也就是<span title="まん - 万" class="popup">万</span> 和 <span title="おく - 亿" class="popup">億</span>之间是空白的吗？这是因为日语里面数字是按万位分组的。超过 1万 (10,000) 以后，就要回头重来，直到 9,999 万，然后才到 <span title="いちおく - 一亿" class="popup">1億</span> (100,000,000)。另外，<span title="ひゃく- 一百" class="popup">百</span> 是 100，<span title="せん - 一千" class="popup">千</span>是 1,000，但再大就必须加个 1，于是剩下的单位就变成了<span title="いちまん - 一万" class="popup">一万</span> (10^4)、<span title="いちおく - 一亿" class="popup">一億</span> (10^8)、<span title="いっちょう - 一兆" class="popup">一兆</span> (10^12)。</p>
 <p>现在你可以数到 9,999,999,999,999,999 了，把那些数字串起来就行。但问题才开始出现。你可以试着说一下「いちちょう」 、「ろくひゃく」或者「さんせん」，说快一点你就会发现很困难，因为老是要重复那些相似的元音。所以日本人决定简化，发音成「<span title="いっちょう - 一兆" class="popup">いっちょう</span>」、 「<span title="ろっぴゃく - 六百" class="popup">ろっぴゃく</span>」和「<span title="さんぜん - 三千" class="popup">さんぜん</span>」。不幸的是这让大家的学习变得更难了。以下是所有的细微变化。</p>
-<table border="1">
+<table class="table table-condensed">
 <tr align="center">
-<th>Numerals</th>
+<th>数字</th>
 <th><span title="かんじ - 汉字" class="popup">漢字</span></th>
 <th><span title="ひらがな - 平假名" class="popup">ひらがな</span></th>
 </tr>
@@ -201,7 +224,7 @@
 </p>
 <p>最后就是日期了，这才是麻烦的开始。每月 1 号是「<span title="ついたち - 每月第一天" class="popup">ついたち</span>」 （<span title="ついたち - 每月第一天" class="popup">一日</span>）; 这跟「<span title="いちにち - 一天" class="popup">いちにち</span>」（<span title="いちにち - 一天" class="popup">一日</span>）<i>不一样</i>，后者的意思是「一天」。除了这个，一起后面要介绍的例外之外，你可以直接在数字后面加上「<span title="にち - 日期的量词" class="popup">日</span>」，它在这里的读音是「<span title="にち - 日期的量词" class="popup">にち</span>」。比如 26 号就是<span title="にじゅうろくにち - the 26th of the month" class="popup">26日</span> （<span title="にじゅうろくにち - the 26th of the month" class="popup">にじゅうろくにち</span>），简单。<i>不过</i>，每月前十天，以及 14 号、19 号、20 号、29 号的读音又是例外，必须单独记忆。你如果对记东西感兴趣的话，这应该能满足你了。注意只是读音变，汉字是不变的。
 </p>
-<table border="1">
+<table class="table table-condensed">
 <caption>日期</caption>
 <tr align="center">
 <th>序号</th>
@@ -373,7 +396,7 @@
 </p>
 <h3>时间</h3>
 <p>现在再学如何说时间。小时是用数字加「<span title="じ 小时的量词" class="popup">時</span>」，读音是「<span title="じ 小时的量词" class="popup">じ</span>」。下面是例外。</p>
-<table border="1">
+<table class="table table-condensed">
 <tr align="center">
 <th><span title="えいご - English" class="popup">英語</span></th>
 <td>4 o'clock</td>
@@ -395,7 +418,7 @@
 </table>
 <p>有没有注意到数字 4、7 和 9 一直不规则？哈，还不止，有时候 1、6 和 8 都是要注意的数字。</p>
 <p>分钟后面加的是「<span title="ふん - 分钟的量词" class="popup">分</span>」，通常读作「<span title="ふん - 分钟的量词" class="popup">ふん</span>」，但也有例外：</p>
-<table border="1">
+<table class="table table-condensed">
 <tr align="center">
 <th><span title="えいご - English" class="popup">英語</span></th>
 <td>1 min</td>
@@ -475,7 +498,7 @@
 <p>表示月份跨度的时候只要在数字后面加上「か」和「<span title="げつ - 月的量词" class="popup">月</span>」，发音是「<span title="げつ - 月的量词" class="popup">げつ</span>」而<i>不是</i>「<span title="がつ - 月的量词" class="popup">がつ</span>」这里的「か」通常写成小号的片假名「ヶ」，这很容易让人困惑，因为读法仍然是「か」而非「け」。这个小「ヶ」其实跟片假名「ケ」完全不是一回事，而是这个量词对应的汉字「箇」的简写。这个小「ヶ」也在一些地名中出现，例如「<span title="せんだがや - 千駄谷" class="popup">千駄<em>ヶ</em>谷</span>」，以及用做其他的量词，例如地点的量词，这在后面「其他量词」小节会介绍。</p>
 <p>数月的时候，要注意以下的发音变化：</p>
 <p></p><center></center>
-<table border="1" cellpadding="5">
+<table class="table table-condensed">
 <tr align="center">
 <th><span title="えいご - English" class="popup">英語</span></th>
 <td>1 month</td>
@@ -510,7 +533,7 @@
 </ol>
 <h3>其他量词</h3>
 <p>我们再介绍一些常用的量词，这样你能有个大概的印象，希望以后你能自学，因为量词实在多到数不清。要注意，量词用错是语法错误。如果你在数人，就<b>必须</b>用人的量词，等等。有时，用通用量词来代替不常用的量词也是可以的。以下是一些量词。</p>
-<table border="1">
+<table class="table table-condensed">
 <tr align="center">
 <th><span title="にほんご - 日语" class="popup">日本語</span></th>
 <th>何时使用</th>
@@ -556,7 +579,7 @@
 <td>用来数量词罕用、或没有量词的物体</td>
 </tr>
 </table>
-<table border="1" class="scale-to-page-width">
+<table class="table table-responsive">
 <caption>从 1 数到 10</caption>
 <tr align="center">
 <td></td>
@@ -711,16 +734,26 @@
 <h2 id="part4">用「<span title="め - 顺序的量词；事件，眼睛" class="popup">目</span>」来表示顺序</h2>
 <p>你可以在量词后面加上「<span title="め - 顺序的量词；事件，眼睛" class="popup">目</span>」（读作「<span title="め - 顺序的量词；事件，眼睛" class="popup">め</span>」）来表示顺序。最常见的例子是量词「<span title="ばん - 地点或名次的量词" class="popup">番</span>」。例如，「<span title="いちばん - 一号" class="popup">一番</span>」的意思是「一号」，但加上「<span title="め - 顺序的量词；事件，眼睛" class="popup">目</span>」之后的意思就是「第一」（<span title="いちばんめ - 第一" class="popup">一番目</span>）。类似的，「<span title="いっかいめ - 第一次" class="popup">一回目</span>」是「第一次」，「<span title="にかいめ - 第二次" class="popup">二回目</span>」是「第二次」，「<span title="よにんめ  - 第四个人" class="popup">四人目</span>」是「第四个人」，等等。</p>
 
-<div class="btn-group btn-group-justified" role="group" aria-label="...">
-  <div class="btn-group" role="group">
-    <a href="requests.html" class="btn btn-default">&#8249; 做出请求</a>
-  </div>
-  <div class="btn-group" role="group">
-    <a href="essential.html" class="btn btn-default">UP</a>
-  </div>
-  <div class="btn-group" role="group">
-    <a href="slang.html" class="btn btn-default">口语习惯及俚语 &#8250;</a>
-  </div>
-</div>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#footer-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="essential.html">UP</a>
+        </div>
+        <div class="collapse navbar-collapse" id="footer-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="requests.html">&#8249; 做出请求</a></li>
+                <li><a href="slang.html">口语习惯及俚语 &#8250;</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
   </div>
   				</div></div></html>

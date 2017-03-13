@@ -42,10 +42,10 @@ span.popup:hover {
 
 .answerline { border-bottom: 1px black solid; text-align: center; width: 10em}
 
-th {background-color: #FFFFDD; }
-
+table { font-size: 0.95em; }
+th {background-color: #FFFFDD; text-align: center; }
+em { font-style: normal; font-weight: bold; }
 .big {font-size: 1.8em;}
-
 li {margin-bottom: 4px;}
 
 /* ****************************************************************************

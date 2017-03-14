@@ -43,12 +43,14 @@ span.popup:hover {
 
 .answerline { border-bottom: 1px black solid; text-align: center; width: 10em}
 
-table { font-size: 0.95em; }
-th {background-color: #FFFFDD; text-align: center; }
-em { font-style: normal; font-weight: bold; }
+table {font-size: 0.95em;}
+th {background-color: #FFFFDD; text-align: center;}
+em {font-style: normal; font-weight: bold;}
 .big {font-size: 1.8em;}
 li {margin-bottom: 4px;}
-
+.breadcrumb {margin: 4px 0 0;}
+.breadcrumb li {margin-bottom: 0px;vertical-align: middle}
+.footer div {margin: 0.7em;}
 /* ****************************************************************************
  * http://craigsworks.com/projects/simpletip/#
  * ************************************************************************* */

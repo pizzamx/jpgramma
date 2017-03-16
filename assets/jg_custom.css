@@ -12,6 +12,7 @@ html {
 body {
   font-family: "Noto Sans CJK SC", "Hiragino Sans GB", "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, FreeSans,  "Liberation Sans", sans-serif;
   font-size: 1em;
+  padding: 50px;
 }
 
 
@@ -50,6 +51,7 @@ em {font-style: normal; font-weight: bold;}
 li {margin-bottom: 4px;}
 .breadcrumb {margin: 4px 0 0;}
 .breadcrumb li {margin-bottom: 0px;vertical-align: middle}
+#nav-top {background: rgba(127, 219, 255, 0.8);}
 .footer div {margin: 0.7em;}
 /* ****************************************************************************
  * http://craigsworks.com/projects/simpletip/#

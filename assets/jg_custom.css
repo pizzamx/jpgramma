@@ -30,6 +30,7 @@ span.popup:hover {text-decoration:none; background: #0092d1;}
 
 .breadcrumb {margin: 4px 0 0;}
 .breadcrumb li {margin-bottom: 0px;vertical-align: middle}
+#nav-top {background: #7FDBFF;}
 /*#nav-top {background: rgba(127, 219, 255, 0.8);}*/
 .footer div {margin: 0.7em;}
 /* ****************************************************************************

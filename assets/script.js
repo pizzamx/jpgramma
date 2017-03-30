@@ -38,7 +38,7 @@ function flip(targetID) {
 }
 
 function toggleAll(targetID) {
-  $("#"+targetID+" .hide").toggle("slow");
+  $("#"+targetID+" .hidex").toggle("slow");
 }
 function toggle(targetID) {
   $("#"+targetID+" .toggle").toggle("slow");
@@ -47,3 +47,57 @@ function toggle(targetID) {
 function toggleSpoilers() {
   $(".spoiler").toggleClass("reveal");
 }
+//SCRIPTS FOR DISPLAYING A MODEL DIALOG CONTAINING SOUND FILES
+function showModal(char) {
+    $('#stroke').attr('src','images/hiragana/'+char+'.gif');
+    var fmt = '.ogg';
+    if (navigator.userAgent.match(/msie/i)) {
+        fmt = '.mp3';
+    }
+    $('#clip').attr('src','audio/'+char+fmt).load();
+    $('#basic-modal-content').modal({overlayClose:true});
+}
+function playClip(char) {
+    var fmt = '.ogg';
+    if (navigator.userAgent.match(/msie/i)) {
+        fmt = '.mp3';
+    }
+    $('#clip').attr('src','audio/'+char+fmt).load();
+    $('#clip')[0].play();
+}
+function playclip_inline(char) {
+    var fmt = '.ogg';
+    if (navigator.userAgent.match(/msie/i)) {
+        fmt = '.mp3';
+    }
+    $('#clip_inline').attr('src','audio/'+char+fmt).load();
+    $('#clip_inline')[0].play();
+}
+$(document).ready(function() {
+    $('.playIcon').find('img').hover(
+        function () {
+            if ($(this).attr('src') == 'images/play.png') {
+                $(this).attr('src', 'images/play_hover.png');
+            }
+        },
+        function () {
+            if ($(this).attr('src') == 'images/play_hover.png') {
+                $(this).attr('src', 'images/play.png');
+            }
+        }
+    );
+
+    $('.playIcon').click(
+        function () {
+            $(this).find('img').attr('src','images/play_pressed.png').addClass('playing');
+            playclip_inline($(this).attr('href'));
+            return false;
+        }
+    );
+
+    $('#clip_inline').on("ended", function() {
+        $('.playing').attr('src','images/play.png').removeClass('playing'); 
+    }, true);
+});
+
+

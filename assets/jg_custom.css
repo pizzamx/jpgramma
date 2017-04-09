@@ -11,20 +11,15 @@ table {font-size: 0.95em;}
 th {background-color: #FFFFDD; text-align: center;}
 em, em .popup {border-bottom: 5px solid rgb(255,119,51); font-style: normal;}
 li {margin-bottom: 4px;}
-li.expanded {
-  list-style-type: circle;
-  list-style-image: url(../images/menu-expanded.png);
-}
-li.collapsed {
-  list-style-type: disc;
-  list-style-image: url(../images/menu-collapsed.png); /* LTR */
-}
-li.leaf {
-  list-style-type: square;
-  list-style-image: url(../images/menu-leaf.png);
-}
+li.expanded{list-style-type:circle;list-style-image:url(../images/menu-expanded.png)}
+li.collapsed{list-style-type:disc;list-style-image:url(../images/menu-collapsed.png)}
+li.leaf{list-style-type:square;list-style-image:url(../images/menu-leaf.png)}
+li em.hira{color:red;border:none;}
 
-
+.note{border:1px #000 solid;background-color:#ffc;margin:.5em;padding:1em;text-align:center;font-weight:700}
+.summary{color:#900;font-size:1em;font-weight:700}
+.sumbox{background-color:#efe;border:1px #000 dashed;margin:2em;padding:1em}
+.plain{list-style:none}
 
 em .popup {border-bottom: 5px solid rgb(255,119,51);}
 .big {font-size: 1.8em;}

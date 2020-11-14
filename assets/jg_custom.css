@@ -17,6 +17,7 @@ li.leaf{list-style-type:square;list-style-image:url(../images/menu-leaf.png)}
 li em.hira{color:red;border:none;}
 
 .note{border:1px #000 solid;background-color:#ffc;margin:.5em;padding:1em;text-align:center;font-weight:700}
+.note2{border:1px #000 solid;background-color:#ffc;padding:1em;}
 .remark{font-weight: 500; font-size: 0.8em;}
 .summary{color:#900;font-size:1em;font-weight:700}
 .sumbox{background-color:#efe;border:1px #000 dashed;margin:2em;padding:1em}

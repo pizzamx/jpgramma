@@ -13,5 +13,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           repository_name: pizzamx/pizzamx.github.io
+          access_token: ${{ secrets.PAT_FOR_ACTIONS }}
           branch: master
           folder: jpgramma

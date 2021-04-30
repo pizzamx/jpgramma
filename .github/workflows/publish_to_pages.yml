@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4.1.1
         with:
-          REPOSITORY_NAME: pizzamx/pizzamx.github.io
-          BRANCH: master
-          FOLDER: jpgramma
+          repository_name: pizzamx/pizzamx.github.io
+          branch: master
+          folder: jpgramma

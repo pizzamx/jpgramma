@@ -1,0 +1,17 @@
+name: Deploy To GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          REPOSITORY_NAME: pizzamx/pizzamx.github.io
+          BRANCH: master
+          FOLDER: jpgramma

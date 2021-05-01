@@ -15,4 +15,4 @@ jobs:
           repository: pizzamx/pizzamx.github.io
           token: ${{ secrets.PAT_FOR_ACTIONS }}
           event-type: my-push-event
-          client-payload: '{"ref": "${{ github.ref }}"}'
+          client-payload: '{"ref": "${{ github.sha }}"}'

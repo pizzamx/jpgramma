@@ -1,4 +1,4 @@
-name: Dispatch Push Event
+name: Dispatch Push Event.
 
 on:
   push:

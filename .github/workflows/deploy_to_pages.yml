@@ -12,8 +12,8 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.PAT_FOR_ACTIONS }}
+          personal_token: ${{ secrets.PAT_FOR_ACTIONS }}
           publish_dir: ./
           external_repository: pizzamx/pizzamx.github.io
           publish_branch: master 
-          estination_dir: jpgramma
+          destination_dir: jpgramma

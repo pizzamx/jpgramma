@@ -98,6 +98,125 @@ $(document).ready(function() {
     $('#clip_inline').on("ended", function() {
         $('.playing').attr('src','images/play.png').removeClass('playing'); 
     }, true);
+
+    // 语音相关变量
+    var jp_text = null;
+    var jp_speaking = false;
+    var jp_index = null;
+
+    // 初始化语音引擎
+    window.speechSynthesis.addEventListener("voiceschanged", function() {
+
+        var voices = window.speechSynthesis.getVoices();
+        for (var i = 0; i < voices.length; i++) {
+            var cur = voices[i];
+            if (cur.lang == "ja-JP") {
+                jp_index = i;
+                break;
+            }
+        }
+        if (jp_index === null) {
+            alert('未找到日语语言包');
+            return;
+        }
+
+        jp_text = new SpeechSynthesisUtterance();
+        jp_text.voice = voices[jp_index];
+        // 调节音量
+        // jp_text.volume = 1;
+        // 调节语速
+        jp_text.rate = 0.6;
+        jp_text.onend = function() {
+            console.log('播放完成');
+            jp_speaking = false;
+        }
+    });
+
+    // 定义函数
+
+    function jp_speak(text){
+
+        if (jp_text) {
+            jp_text.text = text;
+            if (jp_speaking) {
+                // 再次点击则取消播放
+                window.speechSynthesis.cancel();
+                jp_speaking = false;
+                return;
+            }
+            window.speechSynthesis.speak(jp_text);
+            jp_speaking = true;
+            return;
+        }
+        alert('当前系统不支持日语发音');
+    }
+
+    // 绑定事件
+
+    $("ol li, ul li, p").on('click', function(event) {
+        // event.preventDefault();
+        /* Act on the event */
+
+        if(event.target.tagName == 'A'){
+            return;
+        }
+
+        if(event.target.tagName == 'SPAN'){
+            return;
+        }
+        // console.log(event.target.tagName);
+
+        // 第一种情况，句子
+        var html = $(this).html();
+
+        // 先去掉br后面的部分
+        if(html.indexOf('<br>') > -1){
+
+            html = html.split('<br>')[0];
+
+            // 再去掉代码中单词提示
+            var reg = /<div\sclass="tooltip.+?<\/div>/gi
+            html = html.replaceAll(reg,'');
+
+            console.log(html);
+
+            // 外部套上一层div，然后转换取text
+            var text = $('<div>'+html+'<div>').text();
+            console.log('句子：'+text);
+            jp_speak(text);
+            return;
+        }
+
+
+        var text = $(this).text();
+
+        // 第二种情况，单词
+        // 先根据“ - ”拆分，然后再删掉“【】”内容
+        if(text.indexOf(' - ') > -1){
+            text = text.split(' - ')[0];
+            if(text.indexOf(' 【') > -1){
+                text = text.split(' 【')[0];
+            }
+            console.log('单词：'+text);
+            jp_speak(text);
+            return;
+        }
+
+    });
+
+    $("span.popup").on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+
+        var html = $(this).html();
+        // 掉代码中单词提示
+        var reg = /<div\sclass="tooltip.+?<\/div>/gi
+        var text = html.replaceAll(reg,'');
+        console.log('单词：'+text);
+        jp_speak(text);
+
+    });
+
 });
 
 

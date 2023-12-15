@@ -52,7 +52,3 @@ span.popup:hover {text-decoration:none; background: #0092d1;}
 .tooltip{position: absolute; background: #444; padding: 5px; top: 0; opacity: 100; left: 0; z-index: 3; display: none; }
 div.col-lg-8 {position: static;}    /*解决 tooltip 定位问题，不知道会不会 break 什么*/
 
-
-ol li {
-	cursor: pointer;
-}

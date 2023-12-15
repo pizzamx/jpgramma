@@ -127,7 +127,7 @@ $(document).ready(function() {
         // 调节语速
         jp_text.rate = 0.6;
         jp_text.onend = function() {
-            console.log('播放完成');
+            // console.log('播放完成');
             jp_speaking = false;
         }
     });
@@ -185,8 +185,10 @@ $(document).ready(function() {
 
             text = text.split(' - ')[0];
 
-            if(text.indexOf(' 【') > -1 ){            
+            if(text.indexOf(' 【') > -1 ){
+                // 取【】外的发音
                 // text = text.split(' 【')[0];
+                // 取【】内的发音
                 text = text.split('【')[1];
                 text = text.split('】')[0];
                 text = text.replaceAll('・','');
@@ -204,7 +206,7 @@ $(document).ready(function() {
         // 句子
         var html = $this.html();
 
-        var split_arr = [' = ', '＝', ' → '];
+        var split_arr = [' = ', '＝', '→'];
 
         for (var i = 0; i < split_arr.length; i++) {
             var str = split_arr[i];
@@ -263,6 +265,17 @@ $(document).ready(function() {
         /* Act on the event */
 
         var html = $(this).html();
+
+        if (html.indexOf('→') > -1) {
+            // 去掉br后面的部分
+            html = html.split('→')[1];
+        }
+
+        if (html.indexOf('<br>') > -1) {
+            // 去掉br后面的部分
+            html = html.split('<br>')[0];
+        }
+
         // 掉代码中单词提示
         text = html2text(html);
         console.log('单词：' + text);

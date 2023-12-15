@@ -151,6 +151,14 @@ $(document).ready(function() {
         alert('当前系统不支持日语发音');
     }
 
+    function html2text(html){
+        // 再去掉代码中单词提示
+        var reg = /<div\sclass="tooltip.+?<\/div>/gi
+        // 外部套上一层div，然后转换取text
+        html = html.replaceAll(reg,'');
+        return $('<div>'+html+'<div>').text();
+    }
+
     // 绑定事件
 
     $("ol li, ul li").on('click', function(event) {
@@ -167,40 +175,41 @@ $(document).ready(function() {
             return;
         }
 
-        // 第一种情况，句子
-        var html = $(this).html();
-
-        // 先去掉br后面的部分
-        if(html.indexOf('<br>') > -1){
-
-            html = html.split('<br>')[0];
-
-            // 再去掉代码中单词提示
-            var reg = /<div\sclass="tooltip.+?<\/div>/gi
-            html = html.replaceAll(reg,'');
-
-            // 外部套上一层div，然后转换取text
-            var text = $('<div>'+html+'<div>').text();
-            console.log('句子：'+text);
-            jp_speak(text);
-            return;
-        }
-
-
         var text = $(this).text();
 
-        // 第二种情况，单词
-        // 先根据“ - ”拆分，然后再删掉“【】”内容
-        if(text.indexOf(' - ') > -1){
+        // 单词
+        // 先根据“ - ”拆分，然后再删掉“【”和“（”内容
+        if(text.indexOf(' - ') > -1 && (text.indexOf(' 【') > -1 || text.indexOf(' （') > -1 )){
             text = text.split(' - ')[0];
-            if(text.indexOf(' 【') > -1){
-                text = text.split(' 【')[0];
-            }
+            text = text.split(' 【')[0];
+            text = text.split(' （')[0];
             console.log('单词：'+text);
             jp_speak(text);
             return;
         }
 
+        // 句子
+        var html = $(this).html();
+
+        // 特殊区域
+        if(html.indexOf(' → ') > -1){
+            var arr = html.split(' → ');
+            // 获取最后一个 → 后面部分
+            html = arr[arr.length - 1];
+        }else if(html.indexOf(' = ') > -1){
+            // 获取最后一个=后面部分
+            var arr = html.split(' = ');
+            html = arr[arr.length - 1];
+        }else if(html.indexOf('<br>') > -1){
+            // 去掉br后面的部分
+            html = html.split('<br>')[0];
+        }
+
+        text = html2text(html);
+        console.log('句子：'+text);
+        jp_speak(text);
+        // 阻止事件继续冒泡
+        return false;
     });
 
 
@@ -208,7 +217,7 @@ $(document).ready(function() {
     $("p").on('click', function(event) {
         // event.preventDefault();
         /* Act on the event */
-        
+
         if(event.target.tagName == 'SPAN'){
             return;
         }
@@ -225,12 +234,8 @@ $(document).ready(function() {
                 html = html.split('：')[1];
             }
 
-            // 最后去掉代码中单词提示
-            var reg = /<div\sclass="tooltip.+?<\/div>/gi
-            html = html.replaceAll(reg,'');
-
-            // 外部套上一层div，然后转换取text
-            var text = $('<div>'+html+'<div>').text();
+            // 去掉提示，获取全部文字，播放朗诵语音
+            text = html2text(html);
             console.log('句子：'+text);
             jp_speak(text);
             return;
@@ -238,17 +243,31 @@ $(document).ready(function() {
 
     });
 
+    $("table.table-condensed td").on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+
+        var html = $(this).html();
+        // 掉代码中单词提示
+        text = html2text(html);
+        console.log('单词：'+text);
+        jp_speak(text);
+        // 阻止事件继续冒泡
+        return false;
+    });
+
+
     $("span.popup").on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
 
         var html = $(this).html();
         // 掉代码中单词提示
-        var reg = /<div\sclass="tooltip.+?<\/div>/gi
-        var text = html.replaceAll(reg,'');
+        text = html2text(html);
         console.log('单词：'+text);
         jp_speak(text);
-
+        // 阻止事件继续冒泡
+        return false;
     });
 
 });

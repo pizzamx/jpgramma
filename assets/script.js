@@ -153,9 +153,11 @@ $(document).ready(function() {
 
     // 绑定事件
 
-    $("ol li, ul li, p").on('click', function(event) {
+    $("ol li, ul li").on('click', function(event) {
         // event.preventDefault();
         /* Act on the event */
+
+        // console.log(event.target.tagName);
 
         if(event.target.tagName == 'A'){
             return;
@@ -164,7 +166,6 @@ $(document).ready(function() {
         if(event.target.tagName == 'SPAN'){
             return;
         }
-        // console.log(event.target.tagName);
 
         // 第一种情况，句子
         var html = $(this).html();
@@ -177,8 +178,6 @@ $(document).ready(function() {
             // 再去掉代码中单词提示
             var reg = /<div\sclass="tooltip.+?<\/div>/gi
             html = html.replaceAll(reg,'');
-
-            console.log(html);
 
             // 外部套上一层div，然后转换取text
             var text = $('<div>'+html+'<div>').text();
@@ -198,6 +197,41 @@ $(document).ready(function() {
                 text = text.split(' 【')[0];
             }
             console.log('单词：'+text);
+            jp_speak(text);
+            return;
+        }
+
+    });
+
+
+
+    $("p").on('click', function(event) {
+        // event.preventDefault();
+        /* Act on the event */
+        
+        if(event.target.tagName == 'SPAN'){
+            return;
+        }
+
+        var html = $(this).html();
+
+        if(html.indexOf('<br>') > -1){
+
+            // 先去掉br后面的部分
+            html = html.split('<br>')[0];
+
+            // 再去掉：前面部分
+            if(html.indexOf('：') > -1){
+                html = html.split('：')[1];
+            }
+
+            // 最后去掉代码中单词提示
+            var reg = /<div\sclass="tooltip.+?<\/div>/gi
+            html = html.replaceAll(reg,'');
+
+            // 外部套上一层div，然后转换取text
+            var text = $('<div>'+html+'<div>').text();
+            console.log('句子：'+text);
             jp_speak(text);
             return;
         }

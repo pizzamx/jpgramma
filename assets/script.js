@@ -134,7 +134,7 @@ $(document).ready(function() {
 
     // 定义函数
 
-    function jp_speak(text){
+    function jp_speak(text) {
 
         if (jp_text) {
             jp_text.text = text;
@@ -151,12 +151,12 @@ $(document).ready(function() {
         alert('当前系统不支持日语发音');
     }
 
-    function html2text(html){
+    function html2text(html) {
         // 再去掉代码中单词提示
         var reg = /<div\sclass="tooltip.+?<\/div>/gi
         // 外部套上一层div，然后转换取text
-        html = html.replaceAll(reg,'');
-        return $('<div>'+html+'<div>').text();
+        html = html.replaceAll(reg, '');
+        return $('<div>' + html + '<div>').text();
     }
 
     // 绑定事件
@@ -165,48 +165,63 @@ $(document).ready(function() {
         // event.preventDefault();
         /* Act on the event */
 
+        var $this = $(this);
+
         // console.log(event.target.tagName);
 
-        if(event.target.tagName == 'A'){
+        if (event.target.tagName == 'A' || $this.children('a').length > 0) {
             return;
         }
 
-        if(event.target.tagName == 'SPAN'){
+        if (event.target.tagName == 'SPAN') {
             return;
         }
 
-        var text = $(this).text();
+        var text = $this.text();
 
         // 单词
         // 先根据“ - ”拆分，然后再删掉“【”和“（”内容
-        if(text.indexOf(' - ') > -1 && (text.indexOf(' 【') > -1 || text.indexOf(' （') > -1 )){
+        if (event.target.tagName == 'LI' && text.indexOf(' - ') > -1 && $this.children().length <= 0){
+
             text = text.split(' - ')[0];
-            text = text.split(' 【')[0];
-            text = text.split(' （')[0];
-            console.log('单词：'+text);
+
+            if(text.indexOf(' 【') > -1 ){            
+                // text = text.split(' 【')[0];
+                text = text.split('【')[1];
+                text = text.split('】')[0];
+                text = text.replaceAll('・','');
+            }
+
+            if(text.indexOf(' （') > -1 ){            
+                text = text.split(' （')[0];
+            }
+
+            console.log('单词：' + text);
             jp_speak(text);
-            return;
+            return false;
         }
 
         // 句子
-        var html = $(this).html();
+        var html = $this.html();
 
-        // 特殊区域
-        if(html.indexOf(' → ') > -1){
-            var arr = html.split(' → ');
-            // 获取最后一个 → 后面部分
-            html = arr[arr.length - 1];
-        }else if(html.indexOf(' = ') > -1){
-            // 获取最后一个=后面部分
-            var arr = html.split(' = ');
-            html = arr[arr.length - 1];
-        }else if(html.indexOf('<br>') > -1){
+        var split_arr = [' = ', '＝', ' → '];
+
+        for (var i = 0; i < split_arr.length; i++) {
+            var str = split_arr[i];
+            if (html.indexOf(str) > -1) {
+                var arr = html.split(str);
+                // 获取最后一个 → 后面部分
+                html = arr[arr.length - 1];
+            }
+        }
+
+        if (html.indexOf('<br>') > -1) {
             // 去掉br后面的部分
             html = html.split('<br>')[0];
         }
 
         text = html2text(html);
-        console.log('句子：'+text);
+        console.log('句子：' + text);
         jp_speak(text);
         // 阻止事件继续冒泡
         return false;
@@ -218,25 +233,25 @@ $(document).ready(function() {
         // event.preventDefault();
         /* Act on the event */
 
-        if(event.target.tagName == 'SPAN'){
+        if (event.target.tagName == 'SPAN') {
             return;
         }
 
         var html = $(this).html();
 
-        if(html.indexOf('<br>') > -1){
+        if (html.indexOf('<br>') > -1) {
 
             // 先去掉br后面的部分
             html = html.split('<br>')[0];
 
             // 再去掉：前面部分
-            if(html.indexOf('：') > -1){
+            if (html.indexOf('：') > -1) {
                 html = html.split('：')[1];
             }
 
             // 去掉提示，获取全部文字，播放朗诵语音
             text = html2text(html);
-            console.log('句子：'+text);
+            console.log('句子：' + text);
             jp_speak(text);
             return;
         }
@@ -244,13 +259,13 @@ $(document).ready(function() {
     });
 
     $("table.table-condensed td").on('click', function(event) {
-        event.preventDefault();
+        // event.preventDefault();
         /* Act on the event */
 
         var html = $(this).html();
         // 掉代码中单词提示
         text = html2text(html);
-        console.log('单词：'+text);
+        console.log('单词：' + text);
         jp_speak(text);
         // 阻止事件继续冒泡
         return false;
@@ -258,13 +273,13 @@ $(document).ready(function() {
 
 
     $("span.popup").on('click', function(event) {
-        event.preventDefault();
+        // event.preventDefault();
         /* Act on the event */
 
         var html = $(this).html();
         // 掉代码中单词提示
         text = html2text(html);
-        console.log('单词：'+text);
+        console.log('单词：' + text);
         jp_speak(text);
         // 阻止事件继续冒泡
         return false;

@@ -29,10 +29,10 @@ em .popup {border-bottom: 5px solid rgb(255,119,51);}
 .popup {cursor: help; text-decoration: none; color: #fff; background: #24ade2; margin: 0.1rem; padding: 0.1rem;}
 span.popup:hover {text-decoration:none; background: #0092d1;}
 
-.spoiler { background-color£º#444; color£º#444; padding-right£º20px; }
-.spoiler em { color£º#444; }
-.spoiler:hover, .reveal { background-color£ºtransparent; }
-.spoiler:hover em, .reveal em { color£º#F73; }
+.spoiler { background-colorï¼š#444; colorï¼š#444; padding-rightï¼š20px; }
+.spoiler em { colorï¼š#444; }
+.spoiler:hover, .reveal { background-colorï¼štransparent; }
+.spoiler:hover em, .reveal em { colorï¼š#F73; }
 
 .hidex {display: none;}
 
@@ -50,5 +50,5 @@ span.popup:hover {text-decoration:none; background: #0092d1;}
  * http://craigsworks.com/projects/simpletip/#
  * ************************************************************************* */
 .tooltip{position: absolute; background: #444; padding: 5px; top: 0; opacity: 100; left: 0; z-index: 3; display: none; }
-div.col-lg-8 {position: static;}    /*½â¾ö tooltip ¶¨Î»ÎÊÌâ£¬²»ÖªµÀ»á²»»á break Ê²Ã´*/
+div.col-lg-8 {position: static;}    /*è§£å†³ tooltip å®šä½é—®é¢˜ï¼Œä¸çŸ¥é“ä¼šä¸ä¼š break ä»€ä¹ˆ*/
 

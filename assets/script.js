@@ -98,6 +98,206 @@ $(document).ready(function() {
     $('#clip_inline').on("ended", function() {
         $('.playing').attr('src','images/play.png').removeClass('playing'); 
     }, true);
+
+    // 语音相关变量
+    var jp_text = null;
+    var jp_speaking = false;
+    var jp_index = null;
+
+    // 初始化语音引擎
+    window.speechSynthesis.addEventListener("voiceschanged", function() {
+
+        var voices = window.speechSynthesis.getVoices();
+        for (var i = 0; i < voices.length; i++) {
+            var cur = voices[i];
+            if (cur.lang == "ja-JP") {
+                jp_index = i;
+                break;
+            }
+        }
+        if (jp_index === null) {
+            alert('未找到日语语言包');
+            return;
+        }
+
+        jp_text = new SpeechSynthesisUtterance();
+        jp_text.voice = voices[jp_index];
+        // 调节音量
+        // jp_text.volume = 1;
+        // 调节语速
+        jp_text.rate = 0.6;
+        jp_text.onend = function() {
+            // console.log('播放完成');
+            jp_speaking = false;
+        }
+    });
+
+    // 定义函数
+
+    function jp_speak(text) {
+
+        if (jp_text) {
+            jp_text.text = text;
+            if (jp_speaking) {
+                // 再次点击则取消播放
+                window.speechSynthesis.cancel();
+                jp_speaking = false;
+                return;
+            }
+            window.speechSynthesis.speak(jp_text);
+            jp_speaking = true;
+            return;
+        }
+        alert('当前系统不支持日语发音');
+    }
+
+    function html2text(html) {
+        // 再去掉代码中单词提示
+        var reg = /<div\sclass="tooltip.+?<\/div>/gi
+        // 外部套上一层div，然后转换取text
+        html = html.replaceAll(reg, '');
+        return $('<div>' + html + '<div>').text();
+    }
+
+    // 绑定事件
+
+    $("ol li, ul li").on('click', function(event) {
+        // event.preventDefault();
+        /* Act on the event */
+
+        var $this = $(this);
+
+        // console.log(event.target.tagName);
+
+        if (event.target.tagName == 'A' || $this.children('a').length > 0) {
+            return;
+        }
+
+        if (event.target.tagName == 'SPAN') {
+            return;
+        }
+
+        var text = $this.text();
+
+        // 单词
+        // 先根据“ - ”拆分，然后再删掉“【”和“（”内容
+        if (event.target.tagName == 'LI' && text.indexOf(' - ') > -1 && $this.children().length <= 0){
+
+            text = text.split(' - ')[0];
+
+            if(text.indexOf(' 【') > -1 ){
+                // 取【】外的发音
+                // text = text.split(' 【')[0];
+                // 取【】内的发音
+                text = text.split('【')[1];
+                text = text.split('】')[0];
+                text = text.replaceAll('・','');
+            }
+
+            if(text.indexOf(' （') > -1 ){            
+                text = text.split(' （')[0];
+            }
+
+            console.log('单词：' + text);
+            jp_speak(text);
+            return false;
+        }
+
+        // 句子
+        var html = $this.html();
+
+        var split_arr = [' = ', '＝', '→'];
+
+        for (var i = 0; i < split_arr.length; i++) {
+            var str = split_arr[i];
+            if (html.indexOf(str) > -1) {
+                var arr = html.split(str);
+                // 获取最后一个 → 后面部分
+                html = arr[arr.length - 1];
+            }
+        }
+
+        if (html.indexOf('<br>') > -1) {
+            // 去掉br后面的部分
+            html = html.split('<br>')[0];
+        }
+
+        text = html2text(html);
+        console.log('句子：' + text);
+        jp_speak(text);
+        // 阻止事件继续冒泡
+        return false;
+    });
+
+
+
+    $("p").on('click', function(event) {
+        // event.preventDefault();
+        /* Act on the event */
+
+        if (event.target.tagName == 'SPAN') {
+            return;
+        }
+
+        var html = $(this).html();
+
+        if (html.indexOf('<br>') > -1) {
+
+            // 先去掉br后面的部分
+            html = html.split('<br>')[0];
+
+            // 再去掉：前面部分
+            if (html.indexOf('：') > -1) {
+                html = html.split('：')[1];
+            }
+
+            // 去掉提示，获取全部文字，播放朗诵语音
+            text = html2text(html);
+            console.log('句子：' + text);
+            jp_speak(text);
+            return;
+        }
+
+    });
+
+    $("table.table-condensed td").on('click', function(event) {
+        // event.preventDefault();
+        /* Act on the event */
+
+        var html = $(this).html();
+
+        if (html.indexOf('→') > -1) {
+            // 去掉br后面的部分
+            html = html.split('→')[1];
+        }
+
+        if (html.indexOf('<br>') > -1) {
+            // 去掉br后面的部分
+            html = html.split('<br>')[0];
+        }
+
+        // 掉代码中单词提示
+        text = html2text(html);
+        console.log('单词：' + text);
+        jp_speak(text);
+        // 阻止事件继续冒泡
+        return false;
+    });
+
+
+    $("span.popup").on('click', function(event) {
+        // event.preventDefault();
+        /* Act on the event */
+
+        var html = $(this).html();
+        // 掉代码中单词提示
+        text = html2text(html);
+        console.log('单词：' + text);
+        jp_speak(text);
+        // 阻止事件继续冒泡
+        return false;
+    });
+
 });
 
 

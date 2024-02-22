@@ -298,6 +298,65 @@ $(document).ready(function() {
         return false;
     });
 
+
+    (function() {        
+        /*
+        * 读音按钮
+        */
+        // 检测鼠标弹起事件
+        var btn = document.createElement('div');
+        btn.setAttribute('style','position:absolute;padding: 5px;z-index: 999999;');
+
+        btn.innerHTML = '<button style="padding: 5px;background: #efe;cursor: pointer;border:1px solid #000;height:28px;width:28px;font-size: 12px;">读</button>';
+        // 添加读音图标到 DOM
+        document.documentElement.appendChild(btn);
+
+        document.addEventListener('mousedown', function(e) {
+            if (e.target == btn || (e.target.parentNode && e.target.parentNode == btn) || (e.target.parentNode.parentNode && e.target.parentNode
+                    .parentNode == btn)) {
+                // 点击读音图标时阻止选中的文本消失
+                e.preventDefault();
+            }
+        })
+
+        // 选中变化事件
+        document.addEventListener("selectionchange", function() {
+            if (!window.getSelection().toString().trim()) {
+                btn.style.display = 'none';
+                // server.containerDestroy();
+            }
+        });
+
+        // 显示、隐藏读音图标
+        document.addEventListener('mouseup', function(e) {
+            if (e.target == btn || (e.target.parentNode && e.target.parentNode == btn) || (e.target.parentNode.parentNode && e.target.parentNode
+                    .parentNode == btn)) {
+                // 点击了读音图标
+                e.preventDefault();
+                return;
+            }
+            var text = window.getSelection().toString().trim();
+            if (text && text.length < 800 && btn.style.display == 'none') {
+                btn.style.top = e.pageY + 12 + 'px';
+                btn.style.left = e.pageX + 'px';
+                btn.style.display = 'block';
+            } else if (!text) {
+                btn.style.display = 'none';
+            }
+        });
+
+        // 读音图标点击事件
+        btn.addEventListener('click', function(e) {
+            var text = window.getSelection().toString().trim();
+            if (text) {
+                console.log('读音：' + text);
+                jp_speak(text);
+                btn.style.display = 'none';
+            }
+        });
+
+    })();
+
 });
 
 

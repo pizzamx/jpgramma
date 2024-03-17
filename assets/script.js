@@ -104,9 +104,12 @@ $(document).ready(function() {
     var jp_speaking = false;
     var jp_index = null;
 
-    // 初始化语音引擎
-    window.speechSynthesis.addEventListener("voiceschanged", function() {
-
+    function initVoice() {
+        console.log('loading voice')
+        if (jp_text) {
+            console.log('voice already loaded')
+            return
+        }
         var voices = window.speechSynthesis.getVoices();
         for (var i = 0; i < voices.length; i++) {
             var cur = voices[i];
@@ -116,7 +119,6 @@ $(document).ready(function() {
             }
         }
         if (jp_index === null) {
-            alert('未找到日语语言包');
             return;
         }
 
@@ -130,7 +132,15 @@ $(document).ready(function() {
             // console.log('播放完成');
             jp_speaking = false;
         }
+    }
+
+    initVoice();
+
+    // 初始化语音引擎
+    window.speechSynthesis.addEventListener("voiceschanged", function() {
+        initVoice()
     });
+
 
     // 定义函数
 

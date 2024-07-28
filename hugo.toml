@@ -1,0 +1,4 @@
+baseUrl = 'https://res.wokanxing.info/jpgramma/'
+languageCode = 'zh-Hans'
+title = '日语语法指南'
+uglyURLs = true

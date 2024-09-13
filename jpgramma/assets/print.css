@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+/* @file print.css
+ * General print stylesheet for Nitobe. http://drupal.org/projects/nitobe
+ *
+ * $Id: print.css,v 1.1.2.1 2009/08/01 17:58:31 shannonlucas Exp $
+ */
+ 
+.answerline { border-bottom: 1px black solid; }

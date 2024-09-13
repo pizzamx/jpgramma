@@ -1,0 +1,54 @@
+
+/**
+ * @file typography.css
+ * Typography styles for Nitobe.
+ *
+ * $Id: typography.css,v 1.1.2.2 2009/08/01 17:58:31 shannonlucas Exp $
+ */
+html {font-size : 16px;}
+body {font: 1em/150% "Noto Sans CJK SC", "Hiragino Sans GB", "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, FreeSans,  "Liberation Sans", sans-serif;}
+table {font-size: 0.95em;}
+th {background-color: #FFFFDD; text-align: center;}
+em, em .popup {border-bottom: 5px solid rgb(255,119,51); font-style: normal;}
+li {margin-bottom: 4px;}
+li.expanded{list-style-type:circle;list-style-image:url(../images/menu-expanded.png)}
+li.collapsed{list-style-type:disc;list-style-image:url(../images/menu-collapsed.png)}
+li.leaf{list-style-type:square;list-style-image:url(../images/menu-leaf.png)}
+li em.hira{color:red;border:none;}
+
+.note{border:1px #000 solid;background-color:#ffc;margin:.5em;padding:1em;text-align:center;font-weight:700}
+.note2{border:1px #000 solid;background-color:#ffc;padding:1em;}
+.remark{font-weight: 500; font-size: 0.8em;}
+.summary{color:#900;font-size:1em;font-weight:700}
+.sumbox{background-color:#efe;border:1px #000 dashed;margin:2em;padding:1em}
+.plain{list-style:none}
+
+em .popup {border-bottom: 5px solid rgb(255,119,51);}
+.big {font-size: 1.8em;}
+
+.popup {cursor: help; text-decoration: none; color: #fff; background: #24ade2; margin: 0.1rem; padding: 0.1rem;}
+span.popup:hover {text-decoration:none; background: #0092d1;}
+
+.spoiler { background-color：#444; color：#444; padding-right：20px; }
+.spoiler em { color：#444; }
+.spoiler:hover, .reveal { background-color：transparent; }
+.spoiler:hover em, .reveal em { color：#F73; }
+
+.hidex {display: none;}
+
+.answerline { border-bottom: 1px black solid; text-align: center; width: 10em}
+
+.breadcrumb {margin: 4px 0 0; background: #7FDBFF;}
+.breadcrumb li {margin-bottom: 0px;vertical-align: middle}
+.breadcrumb > li + li:before {color: #000 !important;}
+#nav-top {background: #7FDBFF;}
+/*#nav-top {background: rgba(127, 219, 255, 0.8);}*/
+.footer div {margin: 0.7em;}
+.footer .pull-left a:before {content: "\00ab"; padding: 0 1em; font-size: 0.8em;}
+.footer .pull-right a:after {content: "\00bb"; padding: 0 1em; font-size: 0.8em;}
+/* ****************************************************************************
+ * http://craigsworks.com/projects/simpletip/#
+ * ************************************************************************* */
+.tooltip{position: absolute; background: #444; padding: 5px; top: 0; opacity: 100; left: 0; z-index: 3; display: none; }
+div.col-lg-8 {position: static;}    /*解决 tooltip 定位问题，不知道会不会 break 什么*/
+

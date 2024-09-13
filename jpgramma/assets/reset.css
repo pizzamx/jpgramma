@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+/**
+ * @file reset.css
+ * Eric Meyer's Reset CSS
+ *
+ * v1.0 | 20080212
+ * http://meyerweb.com/eric/tools/css/reset/
+ *
+ * Changes to the original Reset CSS:
+ *   - "outline" attributes have been commented out for accessibility reasons
+ *   - transparent background for table elements is removed as this causes 
+ *     problems with tables added by hand in node bodies.
+ *
+ * $Id: reset.css,v 1.1.2.2 2009/08/01 17:58:31 shannonlucas Exp $
+ */
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  /*border: 0;*/
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* Table elements are not made transparent. This can cause problems when cells
+ * need to be given specific background colors by hand in a node body. */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+caption {
+  background: transparent;	
+}
+
+/* Warning: this may add 1-2 pixels to bottom of page */
+/* See http://drupal.org/node/422006 */
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+ins { text-decoration: none; }
+
+del { text-decoration: line-through; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

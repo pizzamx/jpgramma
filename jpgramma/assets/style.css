@@ -1,0 +1,41 @@
+.popup {
+	cursor: help;
+	text-decoration: none;
+    color: #fff;
+    background: #24ade2;
+    margin: 0 1px;
+    padding: 0 3px;
+}
+span.popup:hover {
+	text-decoration:none;
+    background: #0092d1;
+}
+
+.spoiler { background-color£º#444; color£º#444; padding-right£º20px; }
+.spoiler em { color£º#444; }
+.spoiler:hover, .reveal { background-color£ºtransparent; }
+.spoiler:hover em, .reveal em { color£º#F73; }
+
+
+.answerline { border-bottom: 1px black solid; text-align: center; width: 10em}
+
+th {background-color: #FFFFDD; }
+
+.big {font-size: 1.8em;}
+
+li {margin-bottom: 4px;}
+
+/* ****************************************************************************
+ * http://craigsworks.com/projects/simpletip/#
+ * ************************************************************************* */
+.tooltip{ 
+    position: absolute; 
+    background: #444;
+    padding: 5px;
+    top: 0; 
+    left: 0; 
+    z-index: 3; 
+    display: none; 
+}
+
+

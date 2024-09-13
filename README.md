@@ -4,4 +4,4 @@
 
 阅读本教程请访问[这个链接](https://res.wokanxing.info/jpgramma/)。另外热心网友[ Jim Jiang ](https://blog.wokanxing.info/about#c_5655608640405504)做了[一个 PDF 版本可以看这里](https://github.com/jiangming1399/tae-kim_cn_latex_go/releases)。
 
-对我的译本有任何意见建议欢迎提 pull request 或者写信给我，邮件地址相信你能找到~
+对我的译本有任何意见建议欢迎提 pull request 或者写信给我，邮件地址相信你能找到~~

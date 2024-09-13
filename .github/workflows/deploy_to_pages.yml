@@ -4,16 +4,19 @@ on:
   push:
     branches:
       - master
+      
+permissions:
+  contents: write
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          personal_token: ${{ secrets.PAT_FOR_ACTIONS }}
-          publish_dir: ./
-          external_repository: pizzamx/pizzamx.github.io
-          publish_branch: master 
-          destination_dir: jpgramma
+          folder: .
+          target-folder: jpgramma

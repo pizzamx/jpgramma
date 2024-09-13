@@ -18,6 +18,8 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: master
-          folder: .
-          target-folder: jpgramma
+          repository-name: pizzamx/pizzamx.github.io
+          token: ${{ secrets.PAT_FOR_ACTIONS }}
+          branch: master	#the branch you wish to deploy to, for example, gh-pages or docs. Defaults to gh-pages.
+          folder: .	#The folder in your repository that you want to deploy.
+          target-folder: jpgramma	#If you'd like to push the contents of the deployment folder into a specific directory on the deployment branch you can specify it here.

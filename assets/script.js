@@ -113,7 +113,7 @@ $(document).ready(function() {
         var voices = window.speechSynthesis.getVoices();
         for (var i = 0; i < voices.length; i++) {
             var cur = voices[i];
-            if (cur.lang == "ja-JP") {
+            if (cur.lang == "ja-JP" || cur.lang == "ja") {
                 jp_index = i;
                 break;
             }

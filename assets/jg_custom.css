@@ -29,10 +29,10 @@ em .popup {border-bottom: 5px solid rgb(255,119,51);}
 .popup {cursor: help; text-decoration: none; color: #fff; background: #24ade2; margin: 0.1rem; padding: 0.1rem;}
 span.popup:hover {text-decoration:none; background: #0092d1;}
 
-.spoiler { background-color：#444; color：#444; padding-right：20px; }
-.spoiler em { color：#444; }
-.spoiler:hover, .reveal { background-color：transparent; }
-.spoiler:hover em, .reveal em { color：#F73; }
+.spoiler { background-color: #444; color: #444; padding-right: 20px; }
+.spoiler em { color: #444; }
+.spoiler:hover, .reveal { background-color: transparent; }
+.spoiler:hover em, .reveal em { color: #F73; }
 
 .hidex {display: none;}
 
